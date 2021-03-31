@@ -1,0 +1,41 @@
+Affiliate Marketing Site
+Password Generator
+Countdown Clock
+Quiz App
+Calculator
+Web Crawler
+Speed Typing Test
+Twitter Bot
+Alarm Clock
+Email Slicer
+URL Shortener
+Notification System
+Photo Gallery
+A Checklist
+Social Networking Site
+A Blog
+Mobile App
+ATM Machine
+Online Banking Simulation
+Email System
+VPN
+Note Taking App
+Online Shop
+Chat App
+Image Slider
+Progressive Web App
+(Random) Quote Generator
+Number Guessing
+Password Manager
+Car Rental Simulation
+Hospital Management Simulation
+Hotel Management Simulation
+Inventory Management
+To-Do List
+Course Management System
+Library Management System (Bookish)
+E-Commerce Application
+News Application
+Book Finder App
+Image Downloader
+

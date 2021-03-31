@@ -1,0 +1,62 @@
+(sqlite will create a database if the name doesnt exists.)
+
+sqlite3 - Used to start the SQLite database, without no database selected.
+
+sqlite3 [database_name] - Start the database choosen.
+
+.help - To show all available commands and their usage in SQLite3.
+
+.help [topic] - Displays detailed information about the topic.
+
+.quit - To quit the database.
+
+.exit - To exit the sqlite3 program.
+
+.tables - To view all the tables available in the current database choosen.
+
+.databases - To show all databases in the current connection.
+
+.open [filename] - To open a database file
+
+ATTACH DATABASE - Adds an additional database in the current connection.
+	[ex: ATTACH DATABASE [database_path] AS [name_to_call_the_database];]
+
+.table ['pattern'] - To find specific tables with the pattern given.
+
+.schema - Shows structure of all tables in the database.
+	.schema [table_name] - show structure of given table
+	.schema ['pattern'] - show structure of table which match pattern
+
+
+  PATTERNS:  %a - returns all that ends with 'a'
+	     a% - returns all that starts with 'a'
+	     %a% - returns all that contains 'a'
+
+.fullschema - Shows the schema and contents of the sqlite_stat tables.
+
+.indexes - Shows all indexes of the current database.
+	.indexes [table_name] - shows the indexes of the table specified.
+	.indexes [pattern] - shows indexes of tables that match the pattern.
+
+.output [filename] - To save the result of a query into a file. Once issued, all
+		the results of the subsequent(following) queries 
+		will be saved into that file you specified.
+
+.output - To display the result of the query to the standard output again.
+
+.once [filename] - To save the result of the next single query only to the filename.
+
+.read [filename] - To execute SQL statements from a text file.
+
+.header [on/off] - To display headers(titles) of an output.
+
+.mode [mode] - To set the output mode.
+	modes: (table, column)
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+Sololearn Database Table.
+
+*customers table
+
+-FirstName  LastName
+John        Smith
+David       Williams
+Chloe       Anderson
+Emily       Adams
+James       Roberts
+Andrew      Thomas
+Anthony     Young
+Charlotte   Walker
+Daniel      Harris
+John        Smith
+Samuel      Clark
+John        Doe
+Jane        Doe
+Morgan      White
+
+
+- TelephoneNumber
+715-555-1230
+569-999-1719
+715-777-2010
+566-333-1223
+763-777-2956
+
+
+-ZipCode
+10199
+90052
+60607
+77201
+19104
+
+
+-Age
+35
+23
+27
+34
+31
+45
+30
+
+
+Field       Type        Null    Key     Default     Extra
+ID          INT         NO      PRI     NULL
+FirstName   VARCHAR     NO              NULL
+LastName    VARCHAR     NO              NULL
+City        VARCHAR     NO              NULL
+ZipCode     INT         NO              NULL
+
+
+
+*cakes table
+-Name           Calories
+Apple Cake      100
+Banana Cake     200
+Pound Cake      180
+Sponge Cake     100
+Genoise Cake    360
+Chiffon Cake    250
+Opera Cake      90
+Cheese Cake     370
+
+
+
+.
