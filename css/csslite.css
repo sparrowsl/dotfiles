@@ -1,0 +1,214 @@
+/*
+* CSSLite 0.0.4
+* Copyright 2021, Benjamin Thorpe
+* https://csslite.netlify.app
+* Free to use, misuse & abuse under the MIT license.
+
+/* BASE STYLES
+============================================================== */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* html{ font-size: 62.5%; } */
+
+body{ font-family: 'Trebuchet MS', Arial, sans-serif; }
+
+/* Links
+---------------------------------- */
+a:hover { color: #0FA0CE; }
+
+
+/* HEADERS
+=================================================================== */
+header{
+	padding: 1.4rem;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	border-bottom: 1px solid rgba(211, 211, 211, 0.322);
+}
+
+/* Utility classes for headers
+-------------------------------------------------- */
+.header-max,
+.header-lg,
+.header-md,
+.header-sm {
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-max{ height: 100vh; }
+.header-lg{ height: 75vh; }
+.header-md{ height: 50vh; }
+.header-sm{ height: 25vh; }
+
+
+/* BUTTONS
+=========================================================== */
+.btn,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+	font-family: sans-serif;
+	text-align: center;
+	padding: 10px 1em;
+	font-size: 1.05rem;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 2px 2px 2px #ffffff;
+	transition: box-shadow 0.3s ease;
+	border: 1px solid silver; 
+	text-decoration: none;
+}
+
+button:hover{ box-shadow: 2px 2px 2px lightgrey; }
+
+button[disabled], input[disabled] { cursor: default; }
+
+/* Utility classes for buttons
+-------------------------------------------------- */
+.btn-success{ background-color: #05F725; }
+.btn-info{ background-color: #09CDE8; }
+.btn-green{ background-color: #13E040; }
+.btn-orange{ background-color: orange; }
+
+.btn-dark{
+	background-color: #000000;
+	color: white;
+}
+
+.btn-light{
+	background-color: #ffffff;
+	border: 1px solid #C8F1F7;
+}
+
+.btn-error{
+	background-color: #ff005c;
+	color: white;
+}
+
+.btn-primary{
+	background-color: #195EF7;
+	color: white;
+}
+
+.btn-tomato{
+	background-color: tomato;
+	color: whitesmoke;
+}
+
+.btn-teal{
+	background-color: teal;
+	color: white;
+}
+
+.btn-navy{
+	background-color: navy;
+	color: white;
+}
+
+
+/* LISTS
+============================================================ */
+ul, ol{
+	list-style-position: inside;
+	line-height: 1.6;
+	font-size: .8rem;
+}
+
+ul li, ol li{
+	height: fit-content;
+	padding: .4rem; 
+}
+
+/* Utility classes for lists
+-------------------------------------------------------------- */
+.list-space, .list-split{
+	display: grid;
+	grid-gap: 10px;
+}
+
+.list-split{ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+
+/* FORMS
+============================================================ */
+form{ padding: .7rem; }
+
+label{
+	display: inline-block;
+	font-family: sans-serif, Arial;
+	letter-spacing: 1px;
+	color: rgb(99, 96, 96);
+	font-size: 1.13rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea{
+	padding: .5em;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
+	font-size: 1rem;
+	outline: 0;
+    overflow: auto;
+}
+
+textarea{ min-height: 100px; }
+
+/* all placeholders */
+::placeholder{
+	color: grey;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* TABLES
+======================================================== */
+table{
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	margin-top: 1rem;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: .8rem;
+	text-align: left;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+/* Utility classes for tables
+-------------------------------------------------------------- */
+.table-scroll{ overflow: scroll; }
+.table-scroll-x{ overflow-x: scroll; }
+.table-scroll-y{ overflow-y: scroll; }
+.table-borders th, .table-borders td{ border-left: 2px solid #e1e1e1; }
+.table-borders th{ border-top: 2px solid lightgrey; }
+
+
+/* MEDIA QUERIES
+==================================================== */
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
