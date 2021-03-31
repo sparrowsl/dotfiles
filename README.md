@@ -1,2 +1,2 @@
-# notes
-All my notes based on different things
+# Notes
+All my notes based on different things and technologies
