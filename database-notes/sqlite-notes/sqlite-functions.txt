@@ -1,0 +1,20 @@
+SQLITE FUNCTIONS
+==============================================================================
+
+round(number_to_round, number_of_decimal_places)
+
+
+
+======================================================================
+MISC:
+
+The concatenate operator is specified by a double pipe (||) and data
+values on both sides of it.
+
+example:
+-------
+    SELECT name,
+        city || ', ' || state AS location
+    FROM customer;
+======================================================================
+

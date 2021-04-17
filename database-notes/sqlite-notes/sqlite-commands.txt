@@ -53,10 +53,3 @@ ATTACH DATABASE - Adds an additional database in the current connection.
 .mode [mode] - To set the output mode.
 	modes: (table, column)
 
-
-
-
-
-
-
-

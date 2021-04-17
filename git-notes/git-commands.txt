@@ -1,0 +1,16 @@
+CHECK GIT CONFIGURATION
+    The command returns a list of information about your git configuration
+        including username and email.
+
+git config -l
+
+========================================================================
+CACHE YOUR LOGIN CREDENTIALS
+
+git config --global credential.helper cache
+
+
+
+
+
+

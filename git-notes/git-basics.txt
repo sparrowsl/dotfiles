@@ -1,0 +1,37 @@
+SETUP GIT CREDENTIALS
+
+Setup username:
+    git config --global user.name "your_username"
+
+Setup email:
+    git config --global user.email "your_email_address"
+
+============================================================================
+INITIALIZE A GIT REPO
+
+    git init
+
+========================================================================
+ADD A FILE TO STAGING AREA
+The command will add a file to the staging area, ready for commit.
+
+    git add filename (adds only the file specified)
+
+    These three commands will add all file in the current directory.
+        git add . 
+            OR
+        git add -a
+            OR
+        git add -A
+
+    git add file* (adds all file starting with file)
+
+=============================================================================
+CHECK A GIT REPO's STATUS
+
+    git status
+
+
+
+
+
