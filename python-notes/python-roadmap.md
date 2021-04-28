@@ -1,32 +1,33 @@
 ### Topics
 
-[ ] The Python shell
-[ ] Basic Arithmetic
-[ ] Operators
+
+* [ ] The Python shell
+* [ ] Basic Arithmetic
+* [ ] Operators
 	* [ ] Comparison Operators
 	* [ ] Bitwise Operators
 	* [ ] Ternary operators
 	* [ ] Operator Precedence
-[ ] Control Structures
+* [ ] Control Structures
 	* [ ] if
 	* [ ] elif
-	* [ ] else 
-[ ] Accepting user input
-[ ] Strings
-[ ] Booleans
-[ ] Typecasting / Type conversion
-[ ] Looping
+	* [ ] else
+* [ ] Accepting user input
+* [ ] Strings
+* [ ] Booleans
+* [ ] Typecasting / Type conversion
+* [ ] Looping
 	* [ ] for loops
 	* [ ] while loops
 	* [ ] break & continue
-[ ] Exception handling
-[ ] Functions
+* [ ] Exception handling
+* [ ] Functions
 	* [ ] Recursion
 	* [ ]
-[ ] Packages
+* [ ] Packages
 	* [ ] pip
 	* [ ] PyPi
-[ ] Modules
+* [ ] Modules
 	* [ ] Numeric Modules
 	* [ ] Counter
 	* [ ] sys
@@ -40,8 +41,8 @@
 	* [ ] namedtuple
 	* [ ] urllib
 	* [ ] Pretty-Printing with pprint
-[ ] imports
-[ ] Object Oriented Programming
+* [ ] imports
+* [ ] Object Oriented Programming
 	* [ ] Polymorphism
 	* [ ] Abstraction
 	* [ ] Inheritance
@@ -57,76 +58,77 @@
 	* [ ] Dunder
 	* [ ] Serialization with pickle
 	* [ ] Decorators
-[ ] List
-[ ] List Functions
-[ ] Regular Expressions
-[ ] List Comprenhension
-[ ] List slicing
-[ ] String formatting
-[ ] Dictionaries
-[ ] Tuples
-[ ] zip() function
-[ ] Set
-[ ] File Handling
+* [ ] List
+* [ ] List Functions
+* [ ] Regular Expressions
+* [ ] List Comprenhension
+* [ ] List slicing
+* [ ] String formatting
+* [ ] Dictionaries
+* [ ] Tuples
+* [ ] zip() function
+* [ ] Set
+* [ ] File Handling
 	* [ ] Reading
 	* [ ] Writing
 	* [ ] Renaming
 	* [ ] Copying
 	* [ ] Managing
 	* [ ] Zipping
-[ ] Exception Handling
+* [ ] Exception Handling
 	* [ ] Errors
 	* [ ] Exceptions
-[ ] Functional Programming
+* [ ] Functional Programming
 	* [ ] Lambdas
-[ ] Built-in Functions
+* [ ] Built-in Functions
 	* [ ] range()
 	* [ ] eval()
 	* [ ] exec()
-[ ] Closures
-[ ] itertools
-[ ] Multhreading
-[ ] Namespace & Scope
-[ ] Virtual Environments
-[ ] Deep copy & Shallow copy
-[ ] Assert statements
-[ ] Testing with unittest
-[ ] XML Processing
-[ ] Sending Mail
-[ ] Networking
-[ ] Processing Images
-[ ] Accessing Database
-[ ] Logging
-[ ] Descriptors
-[ ] Buffering Protocol
-[ ] Forensics
-[ ] WSGI Protocol
-[ ] Contex Managers
-[ ] Design Patterns
-[ ] Async.io
-[ ] Metaprogramming
-[ ] Data Structures
-[ ] Algorithms
+* [ ] Closures
+* [ ] itertools
+* [ ] Multhreading
+* [ ] Namespace & Scope
+* [ ] Virtual Environments
+* [ ] Deep copy & Shallow copy
+* [ ] Assert statements
+* [ ] Testing with unittest
+* [ ] XML Processing
+* [ ] Sending Mail
+* [ ] Networking
+* [ ] Processing Images
+* [ ] Accessing Database
+* [ ] Logging
+* [ ] Descriptors
+* [ ] Buffering Protocol
+* [ ] Forensics
+* [ ] WSGI Protocol
+* [ ] Contex Managers
+* [ ] Design Patterns
+* [ ] Async.io
+* [ ] Metaprogramming
+* [ ] Data Structures
+* [ ] Algorithms
+
 ### Desktop Frameworks
 
-[ ] Tkinter
-[ ] PyQT
-[ ] Kivy
+* [ ] Tkinter
+* [ ] PyQT
+* [ ] Kivy
 
-#### Web Development
+### Web Frameworks
 
-[ ] Django
-[ ] Flask
+* [ ] Django
+* [ ] Flask
 
 #### Web Scraping
 
-[ ] Beautiful soup
-[ ] Selenium
-[ ] Scrapy
+* [ ] Beautiful soup
+* [ ] Selenium
+* [ ] Scrapy
 
 #### Scripting
 
-[ ] DevOps
+* [ ] DevOps
 	* [ ] Docker
 	* [ ] Kubernetes
-[ ] System Admin
+* [ ] System Admin
