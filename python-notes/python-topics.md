@@ -1,29 +1,27 @@
 ### Topics
 
-
-* [ ] The Python shell
-* [ ] Basic Arithmetic
+* [X] The Python shell
+* [X] Basic Arithmetic
 * [ ] Operators
-	* [ ] Comparison Operators
+	* [X] Comparison Operators
 	* [ ] Bitwise Operators
 	* [ ] Ternary operators
-	* [ ] Operator Precedence
-* [ ] Control Structures
-	* [ ] if
-	* [ ] elif
-	* [ ] else
-* [ ] Accepting user input
-* [ ] Strings
-* [ ] Booleans
-* [ ] Typecasting / Type conversion
-* [ ] Looping
-	* [ ] for loops
-	* [ ] while loops
-	* [ ] break & continue
-* [ ] Exception handling
+	* [X] Operator Precedence
+* [X] Control Structures
+	* [X] if
+	* [X] elif
+	* [X] else
+* [X] Accepting user input
+* [X] Strings
+* [X] Booleans
+* [X] Typecasting / Type conversion
+* [X] Looping
+	* [X] for loops
+	* [X] while loops
+	* [X] break & continue
 * [ ] Functions
 	* [ ] Recursion
-	* [ ]
+	* [ ] Functions with `return` keyword
 * [ ] Packages
 	* [ ] pip
 	* [ ] PyPi
@@ -35,7 +33,7 @@
 	* [ ] shutil
 	* [ ] DefaultDict
 	* [ ] orderedDict
-	* [ ] Random
+	* [ ] random
 	* [ ] datetime
 	* [ ] calendar
 	* [ ] namedtuple
@@ -55,19 +53,20 @@
 	* [ ] Operator Overloading
 	* [ ] Iteraors
 	* [ ] Generators
-	* [ ] Dunder
+	* [ ] Dunder (double underscores)
 	* [ ] Serialization with pickle
 	* [ ] Decorators
-* [ ] List
-* [ ] List Functions
+* [X] List
+	* [X] List Comprehension
+	* [X] List slicing
+	* [X] Copying Lists
+	* [X] List Functions
 * [ ] Regular Expressions
-* [ ] List Comprenhension
-* [ ] List slicing
 * [ ] String formatting
-* [ ] Dictionaries
-* [ ] Tuples
+* [X] Dictionaries
+* [X] Tuples
 * [ ] zip() function
-* [ ] Set
+* [X] Set
 * [ ] File Handling
 	* [ ] Reading
 	* [ ] Writing
@@ -81,7 +80,7 @@
 * [ ] Functional Programming
 	* [ ] Lambdas
 * [ ] Built-in Functions
-	* [ ] range()
+	* [X] range()
 	* [ ] eval()
 	* [ ] exec()
 * [ ] Closures
