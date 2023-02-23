@@ -52,5 +52,6 @@
 	"editor.cursorBlinking": "phase",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"explorer.compactFolders": false
+	"explorer.compactFolders": false,
+	"editor.linkedEditing": true
 }
