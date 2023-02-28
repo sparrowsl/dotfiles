@@ -56,6 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -116,16 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-git_branch(){
-  local branch="$(git symbolic-ref HEAD 2> /dev/null | cut -d'/' -f3)"
-  local truncated="${branch:0:15}"
-
-  if (( ${#branch} > ${#truncated} )); then
-    branch="${truncated}..."
-  fi
-
-  [ -n "${branch}" ] && echo "(${branch})"
-}
 
 export PATH="$PATH:/usr/bin/flutter/bin"
-export PS1="\e[1;36m(\e[0m\e[1;32m\u@\h\e[0m\e[1;36m)-[\e[0m\e[1;34m\w\e[0m\e[1;36m]\e[0m\e[0;33m:$(git_branch)\e[0m\n$> "
+export PS1="\e[1;36m(\e[0m\e[1;32m\u@\h\e[0m\e[1;36m)-[\e[0m\e[1;34m\w\e[0m\e[1;36m]\e[0m\n$> "
