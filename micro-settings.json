@@ -1,0 +1,7 @@
+{
+    "colorscheme": "material-tc",
+    "mkparents": true,
+    "rmtrailingws": true,
+    "tabsize": 2,
+    "tabstospaces": true
+}
