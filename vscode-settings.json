@@ -9,11 +9,9 @@
 	"security.workspace.trust.enabled": false,
 	"security.workspace.trust.startupPrompt": "never",
 	"[dart]": {
-		"editor.formatOnSave": true,
 		"editor.formatOnType": true,
 		"editor.selectionHighlight": false,
 		"editor.suggest.snippetsPreventQuickSuggestions": false,
-		"editor.suggestSelection": "first",
 		"editor.tabCompletion": "onlySnippets",
 		"editor.wordBasedSuggestions": false
 	},
@@ -27,7 +25,7 @@
 	"files.insertFinalNewline": true,
 	"workbench.preferredDarkColorTheme": "Community Material Theme Palenight High Contrast",
 	"workbench.preferredHighContrastColorTheme": "Community Material Theme Palenight",
-	"workbench.tree.indent": 12,
+	"workbench.tree.indent": 11,
 	"breadcrumbs.enabled": false,
 	"workbench.editor.labelFormat": "short",
 	"window.menuBarVisibility": "toggle",
@@ -40,7 +38,7 @@
 	"importCost.fontStyle": "italic",
 	"svelte.ask-to-enable-ts-plugin": false,
 	"path-intellisense.extensionOnImport": true,
-	"path-intellisense.mappings": {},
+	"path-intellisense.ignoreTsConfigBaseUrl": true,
 	"prettier.bracketSameLine": true,
 	"prettier.useTabs": true,
 	"tailwindCSS.classAttributes": ["class", "className", "ngClass", "classes"],
@@ -60,12 +58,10 @@
 	},
 	"windicss.sortOnSave": true,
 	"windicss.enableCodeFolding": true,
-	"windicss.foldCount": 5,
 	"explorer.fileNesting.expand": false,
 	"explorer.expandSingleFolderWorkspaces": false,
 	"search.exclude": {
 		"**/node_modules": true,
-		"**/bower_components": true,
 		"**/*.code-search": true,
 		"**/.git": true,
 		"**/.github": true,
@@ -82,5 +78,36 @@
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.inlineSuggest.enabled": true,
 	"prettier.printWidth": 200,
-	"editor.multiCursorModifier": "ctrlCmd"
+	"editor.multiCursorModifier": "ctrlCmd",
+	"eslint.codeActionsOnSave.mode": "problems",
+	"eslint.format.enable": true,
+	"typescript.preferences.quoteStyle": "double",
+	"javascript.preferences.quoteStyle": "double",
+	"editor.autoClosingDelete": "always",
+	"editor.autoClosingQuotes": "always",
+	"path-intellisense.mappings": {
+		"$lib": "${workspaceFolder}/src/lib"
+	},
+	"editor.scrollbar.verticalScrollbarSize": 10,
+	"editor.scrollbar.horizontalScrollbarSize": 10,
+	"terminal.integrated.smoothScrolling": true,
+	"[markdown]": {
+		"editor.wordWrap": "on"
+	},
+	"workbench.tree.renderIndentGuides": "always",
+	"window.title": "${dirty}${activeEditorMedium}",
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+	"diffEditor.ignoreTrimWhitespace": false,
+	"css.hover.references": false,
+	"less.hover.references": false,
+	"scss.hover.references": false,
+	"javascript.preferences.importModuleSpecifierEnding": "js",
+	"typescript.preferences.importModuleSpecifierEnding": "js",
+	"editor.autoClosingBrackets": "always",
+	"css.lint.float": "warning",
+	"less.lint.float": "warning",
+	"scss.lint.float": "warning"
+	// "js/ts.implicitProjectConfig.checkJs": true
+	// "js/ts.implicitProjectConfig.checkJs": true
 }
