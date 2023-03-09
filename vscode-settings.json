@@ -77,22 +77,15 @@
 	"editor.accessibilitySupport": "off",
 	"editor.find.addExtraSpaceOnTop": false,
 	"editor.inlineSuggest.enabled": true,
-	"prettier.printWidth": 200,
-	"editor.multiCursorModifier": "ctrlCmd",
-	"eslint.codeActionsOnSave.mode": "problems",
-	"eslint.format.enable": true,
 	"typescript.preferences.quoteStyle": "double",
 	"javascript.preferences.quoteStyle": "double",
 	"editor.autoClosingDelete": "always",
 	"editor.autoClosingQuotes": "always",
-	"path-intellisense.mappings": {
-		"$lib": "${workspaceFolder}/src/lib"
-	},
 	"editor.scrollbar.verticalScrollbarSize": 10,
 	"editor.scrollbar.horizontalScrollbarSize": 10,
 	"terminal.integrated.smoothScrolling": true,
 	"[markdown]": {
-		"editor.wordWrap": "on"
+		"editor.wordWrap": "on",
 	},
 	"workbench.tree.renderIndentGuides": "always",
 	"window.title": "${dirty}${activeEditorMedium}",
@@ -107,7 +100,13 @@
 	"editor.autoClosingBrackets": "always",
 	"css.lint.float": "warning",
 	"less.lint.float": "warning",
-	"scss.lint.float": "warning"
+	"scss.lint.float": "warning",
+	"javascript.format.semicolons": "insert",
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"svelte.plugin.svelte.format.config.svelteStrictMode": true,
+	"prettier.printWidth": 100
 	// "js/ts.implicitProjectConfig.checkJs": true
 	// "js/ts.implicitProjectConfig.checkJs": true
 }
