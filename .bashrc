@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source ~/.git-prompt.sh
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -119,4 +121,4 @@ fi
 
 
 export PATH="$PATH:/usr/bin/flutter/bin"
-export PS1="\e[1;36m(\e[0m\e[1;32m\u@\h\e[0m\e[1;36m)-[\e[0m\e[1;34m\w\e[0m\e[1;36m]\e[0m\n$> "
+export PS1='\e[1;36m(\e[0m\e[1;32m\u@\h\e[0m\e[1;36m)-[\e[0m\e[1;34m\w\e[0m\e[1;36m]\e[0m\e[0;33m$(__git_ps1 " (%s)")\e[0m\n$ '
