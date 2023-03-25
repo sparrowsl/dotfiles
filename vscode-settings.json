@@ -10,9 +10,9 @@
 		"editor.selectionHighlight": false,
 		"editor.suggest.snippetsPreventQuickSuggestions": false,
 		"editor.tabCompletion": "onlySnippets",
-		"editor.wordBasedSuggestions": false
+		"editor.wordBasedSuggestions": false,
+		"editor.inlayHints.enabled": "on"
 	},
-	// Controls if file decorations should use badges.
 	"explorer.decorations.badges": false,
 	"editor.tabSize": 2,
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -22,7 +22,6 @@
 	"editor.fontSize": 14,
 	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
 	"editor.formatOnSave": true,
-	// Controls the line height. Use 0 to compute the lineHeight from the fontSize.
 	"editor.lineHeight": 24,
 	"editor.tabCompletion": "on",
 	"editor.smoothScrolling": true,
@@ -119,7 +118,8 @@
 	"workbench.colorTheme": "Community Material Theme Palenight High Contrast",
 	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.folders.color": "#90a4ae",
-	"material-icon-theme.folders.theme": "specific"
+	"material-icon-theme.folders.theme": "specific",
+	"dart.showInspectorNotificationsForWidgetErrors": false
 	// "js/ts.implicitProjectConfig.checkJs": true
 	// "js/ts.implicitProjectConfig.checkJs": true
 }

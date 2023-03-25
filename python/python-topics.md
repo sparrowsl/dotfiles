@@ -21,11 +21,11 @@
 	* [X] break & continue
 * [ ] Functions
 	* [ ] Recursion
-	* [ ] Functions with `return` keyword
-* [ ] Packages
-	* [ ] pip
-	* [ ] PyPi
-* [ ] Modules
+	* [X] Functions with `return` keyword
+* [ ] Package Managers
+	* [X] pip
+	* [ ] Pyenv
+* [ ] Built-in Modules
 	* [ ] Numeric Modules
 	* [ ] Counter
 	* [ ] sys
@@ -39,11 +39,11 @@
 	* [ ] namedtuple
 	* [ ] urllib
 	* [ ] Pretty-Printing with pprint
-* [ ] imports
+* [X] imports
 * [ ] Object Oriented Programming
 	* [ ] Polymorphism
 	* [ ] Abstraction
-	* [ ] Inheritance
+	* [X] Inheritance
 	* [ ] Classes
 		* [ ] Abstact Class
 		* [ ] Concrete Class
@@ -53,7 +53,7 @@
 	* [ ] Operator Overloading
 	* [ ] Iteraors
 	* [ ] Generators
-	* [ ] Dunder (double underscores)
+	* [X] Dunder (double underscores)
 	* [ ] Serialization with pickle
 	* [ ] Decorators
 * [X] List
@@ -62,16 +62,16 @@
 	* [X] Copying Lists
 	* [X] List Functions
 * [ ] Regular Expressions
-* [ ] String formatting
+* [X] String formatting
 * [X] Dictionaries
 * [X] Tuples
 * [ ] zip() function
 * [X] Set
 * [ ] File Handling
-	* [ ] Reading
-	* [ ] Writing
-	* [ ] Renaming
-	* [ ] Copying
+	* [X] Reading
+	* [X] Writing
+	* [X] Renaming
+	* [X] Copying
 	* [ ] Managing
 	* [ ] Zipping
 * [ ] Exception Handling
@@ -107,12 +107,6 @@
 * [ ] Metaprogramming
 * [ ] Data Structures
 * [ ] Algorithms
-
-### Desktop Frameworks
-
-* [ ] Tkinter
-* [ ] PyQT
-* [ ] Kivy
 
 ### Web Frameworks
 
