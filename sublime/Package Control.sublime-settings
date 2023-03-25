@@ -1,0 +1,21 @@
+{
+  "bootstrapped": true,
+  "in_process_packages": [],
+  "installed_packages": [
+    "AutoFileName",
+    "EJS",
+    "Emmet",
+    "FileIcons",
+    "LSP",
+    "LSP-eslint",
+    "LSP-gopls",
+    "LSP-json",
+    "LSP-pyright",
+    "LSP-svelte",
+    "LSP-typescript",
+    "Material Theme",
+    "Package Control",
+    "SideBarEnhancements",
+    "Svelte",
+  ],
+}
