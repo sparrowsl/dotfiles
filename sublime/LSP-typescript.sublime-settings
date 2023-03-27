@@ -1,39 +1,6 @@
 {
-  "show_inlay_hints": true,
   "settings": {
     "implicitProjectConfiguration.checkJs": true,
-    "implicitProjectConfiguration.module": "ESNext",
-    "implicitProjectConfiguration.strictFunctionTypes": true,
-    "implicitProjectConfiguration.strictNullChecks": true,
-    "implicitProjectConfiguration.target": "ES2020",
-    // Javascript formatting options.
-    "javascript.format.insertSpaceAfterCommaDelimiter": true,
-    "javascript.format.insertSpaceAfterConstructor": false,
-    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
-    "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
-    "javascript.format.insertSpaceAfterTypeAssertion": false,
-    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
-    "javascript.format.insertSpaceBeforeTypeAnnotation": false,
-    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
-    "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
-    "javascript.format.semicolons": "insert", // ignore | insert | remove
-    "javascript.format.trimTrailingWhitespace": true,
-    // Javascript inlay hints options.
-    "javascript.inlayHints.includeInlayEnumMemberValueHints": false,
-    "javascript.inlayHints.includeInlayFunctionLikeReturnTypeHints": false,
-    "javascript.inlayHints.includeInlayFunctionParameterTypeHints": true,
-    "javascript.inlayHints.includeInlayParameterNameHints": "none", // none | literals | all
-    "javascript.inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName": false,
-    "javascript.inlayHints.includeInlayPropertyDeclarationTypeHints": false,
-    "javascript.inlayHints.includeInlayVariableTypeHints": false,
-    "javascript.inlayHints.includeInlayVariableTypeHintsWhenTypeMatchesName": false,
+    "javascript.format.semicolons": "insert",
   }
 }
