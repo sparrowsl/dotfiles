@@ -1,9 +1,0 @@
-{
-  "python.analysis.diagnosticSeverityOverrides": {
-    "reportMissingImports": "off"
-  },
-  "settings": {
-    "python.venvPath": ".",
-    "python.pythonPath": "python"
-  },
-}

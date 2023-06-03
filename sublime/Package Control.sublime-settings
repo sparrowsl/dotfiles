@@ -1,19 +1,23 @@
 {
-  "bootstrapped": true,
-  "in_process_packages": [],
-  "installed_packages": [
-    "A File Icon",
-    "AutoFileName",
-    "EJS 2",
-    "Emmet",
-    "LSP",
-    "LSP-json",
-    "LSP-prisma",
-    "LSP-pyright",
-    "LSP-svelte",
-    "LSP-typescript",
-    "Material Theme",
-    "Package Control",
-    "SideBarEnhancements",
-  ],
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Emmet",
+		"GitGutter",
+		"LSP",
+		"LSP-gopls",
+		"LSP-json",
+		"LSP-prisma",
+		"LSP-svelte",
+		"LSP-typescript",
+		"Material Theme",
+		"Package Control",
+		"SideBarTools",
+		"Svelte",
+	],
 }
+
