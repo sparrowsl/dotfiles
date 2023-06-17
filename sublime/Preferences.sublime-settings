@@ -1,16 +1,37 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
 {
+  "auto_complete": false,
+  "auto_complete_commit_on_tab": true,
+  "auto_match_enabled": true,
+  "detect_indentation": true,
+  "draw_indent_guides": true,
+  "file_exclude_patterns": [
+    "*.DS_Store",
+    "*.pyc",
+    "*.git"
+  ],
+  "find_selected_text": true,
+  "fold_buttons": false,
+  "remember_open_files": true,
+  "scroll_past_end": false,
+  "show_full_path": true,
+  "show_minimap": false,
+  "use_simple_full_screen": true,
+  "vintage_start_in_command_mode": false,
+  "wide_caret": true,
   "theme": "Material-Theme-Palenight.sublime-theme",
   "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
   "indent_guide_options": [
     "draw_normal",
     "draw_active"
   ],
-  "line_padding_bottom": 2,
-  "line_padding_top": 2,
+  "line_padding_bottom": 1,
+  "line_padding_top": 1,
   "overlay_scroll_bars": "enabled",
   "caret_style": "phase",
-  "caret_extra_top": 1,
-  "caret_extra_bottom": 1,
+  "caret_extra_top": 2,
+  "caret_extra_bottom": 2,
   "ensure_newline_at_eof_on_save": true,
   "folder_exclude_patterns": [
     "node_modules",
@@ -23,7 +44,7 @@
     "subpixel_antialias"
   ],
   "font_face": "Fira Code",
-  "font_size": 10.5,
+  "font_size": 11.2,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "hardware_acceleration": "opengl",
@@ -39,13 +60,14 @@
     "side_bar_visible": true,
     "status_bar_visible": true,
   },
-  "margin": 0,
   "remember_open_folders": true,
   "save_on_focus_lost": true,
-  "scroll_past_end": false,
-  "show_full_path": false,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "trim_trailing_white_space_on_save": "all",
   "word_wrap": true,
+  "ignored_packages": [
+    "Vintage",
+  ],
 }
+

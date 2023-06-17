@@ -57,7 +57,6 @@
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
-	"svelte.plugin.svelte.format.config.svelteStrictMode": true,
 	"thunder-client.httpVersion": "HTTP/2",
 	"windicss.enableCodeFolding": true,
 	"windicss.sortOnSave": true,
@@ -65,6 +64,7 @@
 	"javascript.suggest.completeFunctionCalls": true,
 	"search.exclude": {
 		"**/.git": true
-	}
+	},
+	"js/ts.implicitProjectConfig.checkJs": true
 }
 

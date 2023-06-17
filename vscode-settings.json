@@ -105,7 +105,6 @@
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
-	"svelte.plugin.svelte.format.config.svelteStrictMode": true,
 	"prettier.printWidth": 100,
 	"git.openRepositoryInParentFolders": "never",
 	"svelte.plugin.svelte.format.config.printWidth": 100,
@@ -119,7 +118,6 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.folders.color": "#90a4ae",
 	"material-icon-theme.folders.theme": "specific",
-	"dart.showInspectorNotificationsForWidgetErrors": false
-	// "js/ts.implicitProjectConfig.checkJs": true
-	// "js/ts.implicitProjectConfig.checkJs": true
+	"dart.showInspectorNotificationsForWidgetErrors": false,
+	"js/ts.implicitProjectConfig.checkJs": true
 }
