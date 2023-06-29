@@ -1,9 +1,9 @@
 {
 	"workbench.colorTheme": "Community Material Theme Palenight High Contrast",
 	"editor.foldingImportsByDefault": true,
-	"editor.scrollBeyondLastLine": false,
+	"editor.scrollBeyondLastLine": true,
 	"workbench.cloudChanges.continueOn": "off",
-	"workbench.commandPalette.history": 10,
+	"workbench.commandPalette.history": 0,
 	"workbench.enableExperiments": false,
 	"workbench.localHistory.enabled": false,
 	"workbench.welcomePage.walkthroughs.openOnInstall": false,
@@ -12,7 +12,6 @@
 	"workbench.editor.enablePreviewFromCodeNavigation": true,
 	"workbench.editor.tabSizing": "shrink",
 	"zenMode.centerLayout": false,
-	// "window.title": "${dirty}${activeEditorShort}${separator}${profileName}${separator}${appName}",
 	"update.showReleaseNotes": false,
 	"css.format.spaceAroundSelectorSeparator": true,
 	"npm.packageManager": "npm",
@@ -20,8 +19,6 @@
 	"thunder-client.httpVersion": "HTTP/2",
 	"editor.wordWrap": "on",
 	"javascript.suggest.completeFunctionCalls": true,
-
-	// =========== VSCODE
 	"telemetry.telemetryLevel": "off",
 	"files.autoSave": "onFocusChange",
 	"security.workspace.trust.banner": "never",
@@ -31,9 +28,10 @@
 	"explorer.decorations.badges": false,
 	"editor.tabSize": 2,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.fontLigatures": true,
-	"editor.fontSize": 13.6,
 	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
+	"editor.fontSize": 13.6,
+	// "editor.fontLigatures": true,
+	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
 	"editor.formatOnSave": true,
 	"editor.lineHeight": 24,
 	"editor.tabCompletion": "on",
@@ -42,6 +40,9 @@
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.quickSuggestions": {
 		"strings": "on"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll": false
 	},
 	"editor.accessibilitySupport": "off",
 	"editor.find.addExtraSpaceOnTop": false,
@@ -58,18 +59,14 @@
 	"workbench.tree.indent": 11,
 	"breadcrumbs.enabled": false,
 	"workbench.editor.labelFormat": "short",
-	"window.": "toggle",
 	"workbench.activityBar.visible": false,
 	"terminal.integrated.cursorStyle": "line",
 	"css.lint.duplicateProperties": "warning",
 	"html.hover.references": false,
 	"importCost.fontStyle": "italic",
 	"svelte.ask-to-enable-ts-plugin": false,
-	// "path-intellisense.extensionOnImport": true,
-	// "path-intellisense.ignoreTsConfigBaseUrl": true,
 	"prettier.bracketSameLine": true,
 	"prettier.useTabs": true,
-	// "tailwindCSS.classAttributes": ["class", "className", "ngClass"],
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
@@ -85,7 +82,13 @@
 		"**/*.code-search": true,
 		"**/.git": true,
 		"**/.github": true,
-		"**/package-lock.json": true
+		"**/package-lock.json": true,
+		"**/.output": true,
+		"**/.vscode": true,
+		"**/dist/**": true,
+		"**/logs": true,
+		"**/out/**": true,
+		"**/tmp": true
 	},
 	"terminal.integrated.cursorBlinking": true,
 	"terminal.integrated.fontWeight": "300",
@@ -94,7 +97,6 @@
 	"extensions.autoUpdate": "onlyEnabledExtensions",
 	"workbench.tree.expandMode": "singleClick",
 	"workbench.list.smoothScrolling": true,
-	"typescript.preferences.quoteStyle": "double",
 	"javascript.preferences.quoteStyle": "double",
 	"terminal.integrated.smoothScrolling": true,
 	"[markdown]": {
@@ -103,18 +105,14 @@
 	"workbench.tree.renderIndentGuides": "always",
 	"window.title": "${dirty}${activeEditorMedium}",
 	"files.trimTrailingWhitespace": true,
-	"diffEditor.ignoreTrimWhitespace": false,
 	"css.hover.references": false,
 	"javascript.preferences.importModuleSpecifierEnding": "js",
-	"typescript.preferences.importModuleSpecifierEnding": "js",
 	"css.lint.float": "warning",
-	"less.lint.float": "warning",
-	"scss.lint.float": "warning",
 	"javascript.format.semicolons": "insert",
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
-	"prettier.printWidth": 100,
+	"prettier.printWidth": 150,
 	"git.openRepositoryInParentFolders": "never",
 	"svelte.plugin.svelte.format.config.printWidth": 100,
 	"svelte.plugin.svelte.format.config.svelteAllowShorthand": true,
@@ -122,6 +120,23 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.folders.color": "#90a4ae",
 	"material-icon-theme.folders.theme": "specific",
-	"js/ts.implicitProjectConfig.checkJs": true
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"editor.guides.bracketPairs": "active",
+	"editor.renderWhitespace": "boundary",
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"window.menuBarVisibility": "toggle",
+	"window.titleBarStyle": "custom",
+	"window.dialogStyle": "custom",
+	"workbench.editor.closeOnFileDelete": true,
+	"workbench.editor.highlightModifiedTabs": true,
+	"extensions.ignoreRecommendations": true,
+	"files.trimFinalNewlines": true,
+	"scm.diffDecorationsGutterWidth": 2,
+	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	}
 }
 
