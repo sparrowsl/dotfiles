@@ -16,14 +16,10 @@
       "env": {
         "PATH": "/usr/local/go/bin"
       },
-      "initializationOptions": {
-        "gofumpt": true,
-      },
       "settings": {
-        "gopls.usePlaceholders": true,
         "gopls.completeUnimported": true,
       },
-    }
+    },
   },
 }
 

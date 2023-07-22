@@ -9,15 +9,18 @@
 		"Emmet",
 		"GitGutter",
 		"LSP",
+		"LSP-clangd",
 		"LSP-gopls",
 		"LSP-json",
 		"LSP-prisma",
+		"LSP-pyright",
 		"LSP-svelte",
 		"LSP-typescript",
 		"Material Theme",
 		"Package Control",
 		"SideBarTools",
 		"Svelte",
+		"Terminus",
 	],
 }
 
