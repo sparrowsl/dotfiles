@@ -1,6 +1,4 @@
 {
-	"workbench.colorTheme": "Community Material Theme Palenight High Contrast",
-	"editor.foldingImportsByDefault": true,
 	"editor.scrollBeyondLastLine": true,
 	"workbench.cloudChanges.continueOn": "off",
 	"workbench.commandPalette.history": 0,
@@ -14,7 +12,6 @@
 	"zenMode.centerLayout": false,
 	"update.showReleaseNotes": false,
 	"css.format.spaceAroundSelectorSeparator": true,
-	"npm.packageManager": "npm",
 	"simpleBrowser.focusLockIndicator.enabled": false,
 	"thunder-client.httpVersion": "HTTP/2",
 	"editor.wordWrap": "on",
@@ -30,6 +27,7 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
 	"editor.fontSize": 13.6,
+	// "editor.fontSize": 20,
 	// "editor.fontLigatures": true,
 	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
 	"editor.formatOnSave": true,
@@ -65,16 +63,14 @@
 	"html.hover.references": false,
 	"importCost.fontStyle": "italic",
 	"svelte.ask-to-enable-ts-plugin": false,
-	"prettier.bracketSameLine": true,
 	"prettier.useTabs": true,
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
 	"workbench.settings.enableNaturalLanguageSearch": false,
-	"explorer.compactFolders": false,
 	"html.format.extraLiners": "body",
-	"windicss.sortOnSave": true,
-	"windicss.enableCodeFolding": true,
+	// "windicss.sortOnSave": true,
+	// "windicss.enableCodeFolding": true,
 	"explorer.fileNesting.expand": false,
 	"explorer.expandSingleFolderWorkspaces": false,
 	"search.exclude": {
@@ -112,7 +108,7 @@
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
-	"prettier.printWidth": 150,
+	"prettier.printWidth": 110,
 	"git.openRepositoryInParentFolders": "never",
 	"svelte.plugin.svelte.format.config.printWidth": 100,
 	"svelte.plugin.svelte.format.config.svelteAllowShorthand": true,
@@ -135,8 +131,10 @@
 	"scm.diffDecorationsGutterWidth": 2,
 	"emmet.showSuggestionsAsSnippets": true,
 	"emmet.triggerExpansionOnTab": true,
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
-	}
+	"terminal.integrated.tabStopWidth": 4,
+	"less.hover.references": false,
+	"scss.hover.references": false,
+	"prettier.bracketSameLine": true,
+	"workbench.colorTheme": "Community Material Theme Palenight High Contrast"
 }
 
