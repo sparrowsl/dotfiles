@@ -12,15 +12,14 @@
 		"LSP-clangd",
 		"LSP-gopls",
 		"LSP-json",
-		"LSP-prisma",
 		"LSP-pyright",
+		"LSP-ruff",
 		"LSP-svelte",
 		"LSP-typescript",
 		"Material Theme",
 		"Package Control",
+		"python-black",
 		"SideBarTools",
-		"Svelte",
-		"Terminus",
 	],
 }
 
