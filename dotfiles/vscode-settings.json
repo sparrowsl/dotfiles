@@ -28,8 +28,6 @@
 	"editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace'",
 	"editor.fontSize": 13.6,
 	// "editor.fontSize": 20,
-	// "editor.fontLigatures": true,
-	"editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
 	"editor.formatOnSave": true,
 	"editor.lineHeight": 24,
 	"editor.tabCompletion": "on",
@@ -40,7 +38,9 @@
 		"strings": "on"
 	},
 	"editor.codeActionsOnSave": {
-		"source.fixAll": false
+		"source.fixAll": "never",
+		"source.organizeImports.biome": "explicit",
+		"quickfix.biome": "explicit"
 	},
 	"editor.accessibilitySupport": "off",
 	"editor.find.addExtraSpaceOnTop": false,
@@ -57,11 +57,9 @@
 	"workbench.tree.indent": 11,
 	"breadcrumbs.enabled": false,
 	"workbench.editor.labelFormat": "short",
-	"workbench.activityBar.visible": false,
 	"terminal.integrated.cursorStyle": "line",
 	"css.lint.duplicateProperties": "warning",
 	"html.hover.references": false,
-	"importCost.fontStyle": "italic",
 	"svelte.ask-to-enable-ts-plugin": false,
 	"prettier.useTabs": true,
 	"[prisma]": {
@@ -69,16 +67,16 @@
 	},
 	"workbench.settings.enableNaturalLanguageSearch": false,
 	"html.format.extraLiners": "body",
-	// "windicss.sortOnSave": true,
-	// "windicss.enableCodeFolding": true,
 	"explorer.fileNesting.expand": false,
 	"explorer.expandSingleFolderWorkspaces": false,
 	"search.exclude": {
 		"**/node_modules": true,
 		"**/*.code-search": true,
+		"**/.svelte-kit": true,
 		"**/.git": true,
 		"**/.github": true,
 		"**/package-lock.json": true,
+		".*ignore": true,
 		"**/.output": true,
 		"**/.vscode": true,
 		"**/dist/**": true,
@@ -108,7 +106,6 @@
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
-	"prettier.printWidth": 110,
 	"git.openRepositoryInParentFolders": "never",
 	"svelte.plugin.svelte.format.config.printWidth": 100,
 	"svelte.plugin.svelte.format.config.svelteAllowShorthand": true,
@@ -116,7 +113,7 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.folders.color": "#90a4ae",
 	"material-icon-theme.folders.theme": "specific",
-	"js/ts.implicitProjectConfig.checkJs": true,
+	// "js/ts.implicitProjectConfig.checkJs": true,
 	"editor.guides.bracketPairs": "active",
 	"editor.renderWhitespace": "boundary",
 	"explorer.confirmDelete": false,
@@ -135,6 +132,33 @@
 	"less.hover.references": false,
 	"scss.hover.references": false,
 	"prettier.bracketSameLine": true,
-	"workbench.colorTheme": "Community Material Theme Palenight High Contrast"
+	"workbench.activityBar.location": "hidden",
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"unocss.exclude": [
+		"node_modules",
+		".svelte-kit",
+		"build",
+		".git"
+	],
+	"workbench.colorTheme": "Material Theme Palenight High Contrast",
+	"dart.flutterHotReloadOnSave": "allIfDirty",
+	"dart.hotReloadOnSave": "allIfDirty",
+	"tailwindCSS.files.exclude": [
+		"**/.git/**",
+		"**/node_modules/**",
+		"**/.hg/**",
+		"**/.svn/**",
+		"**/.svelte-kit/**",
+		"build/**",
+		"dist/**"
+	],
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.stickyScroll.scrollWithEditor": false,
+	"workbench.tree.enableStickyScroll": false,
+	"editor.stickyScroll.maxLineCount": 0,
+	"window.commandCenter": false,
+	"workbench.layoutControl.enabled": false,
+	"workbench.startupEditor": "none"
 }
-
