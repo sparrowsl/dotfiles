@@ -93,6 +93,9 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
 
+-- Avoid crashing on zig due to zig-vim issues
+vim.g.zig_fmt_autosave = 0
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -157,7 +160,7 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -208,6 +211,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "go",
+	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "py",
 	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
 })
 
@@ -551,9 +559,19 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- clangd = {},
-				-- gopls = {},
-				-- pyright = {},
+				clangd = {},
+				gopls = {},
+				pyright = {},
+				biome = {},
+				-- cssls = {},
+				-- html = {},
+				-- prismals = {},
+				jsonls = {},
+				ruff_lsp = {},
+				svelte = {},
+				tailwindcss = {},
+				-- dockerls = {},
+				-- zls = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -561,7 +579,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`tsserver`) will work just fine
-				-- tsserver = {},
+				tsserver = {},
 				--
 
 				lua_ls = {
@@ -619,7 +637,7 @@ require("lazy").setup({
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
+				local disable_filetypes = { cpp = true }
 				return {
 					timeout_ms = 500,
 					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
