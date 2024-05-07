@@ -115,13 +115,11 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-alias httpie=HTTPie-2024.AppImage
-
-export PATH=$PATH:/usr/local/bin/flutter/bin
+# export PATH=$PATH:/usr/local/bin/flutter/bin
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/go/bin # needed for apps installed using Go
 export PATH=$PATH:/usr/local/nvim/bin
-export CHROME_EXECUTABLE="/usr/bin/opera"
+# export CHROME_EXECUTABLE="/usr/bin/opera"
 
 # export PS1='\e[1;36m(\e[0m\e[1;32m\u@\h\e[0m\e[1;36m)-[\e[0m\e[1;34m\w\e[0m\e[1;36m]\e[0m\e[0;33m$(__git_ps1 " (%s)")\e[0m\n$ '
 
@@ -134,5 +132,4 @@ export PATH=~/.local/bin:$PATH
 
 # Oh-My-Posh
 export PATH=~/.local/bin:$PATH
-eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/atomic.omp.json')"
-export PATH=$PATH:/usr/bin/HTTPie-2024.AppImage
+eval "$(oh-my-posh init bash --config '~/custom.omp.json')"
