@@ -72,6 +72,16 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "go",
+	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "py",
+	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
+})
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 vim.opt.tabstop = 2
@@ -85,8 +95,6 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
-
-vim.keymap.set("n", "<C-b>", "<Cmd>Neotree toggle<CR>")
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -111,6 +119,8 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -123,16 +133,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank()
 	end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "go",
-	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "py",
-	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
 })
 
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -170,6 +170,13 @@ require("lazy").setup({
 
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
+
+	{
+		"stevearc/oil.nvim",
+		opts = {},
+		-- Optional dependencies
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 
 	-- Here is a more advanced example where we pass configuration
 	-- options to `gitsigns.nvim`. This is equivalent to the following Lua:
@@ -700,17 +707,6 @@ require("lazy").setup({
 				},
 			})
 		end,
-	},
-
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-		},
 	},
 
 	-- Bufferline to display tabs of open buffers/files.
