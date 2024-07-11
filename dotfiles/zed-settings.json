@@ -16,9 +16,30 @@
     "light": "Rosé Pine Moon",
     "dark": "Rosé Pine Moon"
   },
-  // "autosave": "on_focus_change",
-  // "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  // "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "chat_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "assistant": {
+    "button": false,
+    "enabled": false,
+    "version": "1"
+  },
+  "notification_panel": {
+    "button": false
+  },
+  // "always_treat_brackets_as_autoclosed": true,
+  "file_scan_exclusions": ["node_modules", "..."],
+  "outline_panel": {
+    "button": true
+  },
+  // "redact_private_values": true,
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "show_call_status_icon": false,
+  "soft_wrap": "editor_width",
+  "autosave": "on_focus_change",
   "scrollbar": {
     "show": "auto",
     "cursors": false,
