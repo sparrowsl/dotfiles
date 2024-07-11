@@ -1,12 +1,24 @@
 // Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
 {
-  // "theme": "Rosé Pine",
-  "theme": "Rosé Pine Moon",
-  "ui_font_size": 13.5,
-  "buffer_font_size": 13.5,
-  "autosave": "on_focus_change",
-  "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  // "ui_font_size": 13.5,
+  // "buffer_font_size": 13.5,
+  "theme": {
+    "mode": "system",
+    "light": "Rosé Pine Moon",
+    "dark": "Rosé Pine Moon"
+  },
+  // "autosave": "on_focus_change",
+  // "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  // "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "scrollbar": {
     "show": "auto",
     "cursors": false,
@@ -15,20 +27,12 @@
     "selected_symbol": true,
     "diagnostics": true
   },
-  "tab_bar": {
-    "show_nav_history_buttons": false
-  },
-  "formatter": "language_server",
+  // "formatter": "language_server",
   "show_whitespaces": "boundary",
-  "tab_size": 2,
+  // "tab_size": 2,
   "languages": {
     "JavaScript": {
-      "language_servers": [
-        "!eslint",
-        "!prettier",
-        "!vtsls",
-        "..."
-      ]
+      "language_servers": ["!eslint", "!prettier", "!vtsls", "..."]
     }
-  },
+  }
 }
