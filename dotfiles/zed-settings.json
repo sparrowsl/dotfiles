@@ -11,11 +11,10 @@
   "buffer_font_size": 14,
   // "ui_font_size": 13.5,
   // "buffer_font_size": 13.5,
-  "theme": {
-    "mode": "system",
-    "light": "Rosé Pine Moon",
-    "dark": "Rosé Pine Moon"
-  },
+  "ui_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrains Mono",
+  "theme": "Rosé Pine Moon",
+  "format_on_save": "on",
   "chat_panel": {
     "button": false
   },
@@ -31,7 +30,10 @@
     "button": false
   },
   // "always_treat_brackets_as_autoclosed": true,
-  "file_scan_exclusions": ["node_modules", "..."],
+  "file_scan_exclusions": [
+    ".git",
+    "..."
+  ],
   "outline_panel": {
     "button": true
   },
@@ -53,7 +55,12 @@
   // "tab_size": 2,
   "languages": {
     "JavaScript": {
-      "language_servers": ["!eslint", "!prettier", "!vtsls", "..."]
+      "language_servers": [
+        "!eslint",
+        "!prettier",
+        "!vtsls",
+        "..."
+      ]
     }
   }
 }
