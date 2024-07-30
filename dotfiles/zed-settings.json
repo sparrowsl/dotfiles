@@ -8,13 +8,15 @@
 // from the command palette or from `Zed` application menu.
 {
   "ui_font_size": 14,
-  "buffer_font_size": 14,
+  // "buffer_font_size": 14,
   // "ui_font_size": 13.5,
-  // "buffer_font_size": 13.5,
-  "ui_font_family": "JetBrains Mono",
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 13.5,
+  // "ui_font_family": "JetBrains Mono",
+  // "buffer_font_family": "JetBrains Mono",
   "theme": "Rosé Pine Moon",
   "format_on_save": "on",
+  "restore_on_startup": "last_workspace",
+  // "auto_signature_help": true,
   "chat_panel": {
     "button": false
   },
@@ -22,20 +24,22 @@
     "button": false
   },
   "assistant": {
+    "version": "1",
     "button": false,
-    "enabled": false,
-    "version": "1"
+    "enabled": false
   },
   "notification_panel": {
     "button": false
   },
-  // "always_treat_brackets_as_autoclosed": true,
-  "file_scan_exclusions": [
-    ".git",
-    "..."
-  ],
   "outline_panel": {
-    "button": true
+    "button": false
+  },
+  "terminal": {
+    "button": false
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
   },
   // "redact_private_values": true,
   "scroll_beyond_last_line": "vertical_scroll_margin",
@@ -58,9 +62,12 @@
       "language_servers": [
         "!eslint",
         "!prettier",
-        "!vtsls",
+        "!typescript-language-server",
         "..."
       ]
+    },
+    "C": {
+      "format_on_save": "on"
     }
   }
 }
