@@ -4,6 +4,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
@@ -107,6 +111,8 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- keymap for Oil.nvim
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- vim.keymap.set("n", "<C-b>", "<CMD>NvimTreeToggle<CR>", { desc = "Open parent directory" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -121,21 +127,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-for _, value in ipairs({ "go", "py" }) do
+for _, ext in ipairs({ "go", "py" }) do
 	vim.api.nvim_create_autocmd("FileType", {
-		pattern = value,
+		pattern = ext,
 		command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
 	})
 end
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = "go",
--- 	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
--- })
---
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = "py",
--- 	command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
--- })
+
 vim.opt.tabstop = 2
 
 -- [[ Install `lazy.nvim` plugin manager ]]
@@ -190,6 +188,18 @@ require("lazy").setup({
 		},
 	},
 
+	-- {
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	version = "*",
+	-- 	lazy = false,
+	-- 	dependencies = {
+	-- 		"nvim-tree/nvim-web-devicons",
+	-- 	},
+	-- 	config = function()
+	-- 		require("nvim-tree").setup({})
+	-- 	end,
+	-- },
+	--
 	{
 		"stevearc/oil.nvim",
 		opts = {},
@@ -346,7 +356,22 @@ require("lazy").setup({
 		end,
 	},
 
-	{ -- LSP Configuration & Plugins
+	-- LSP Plugins
+	{
+		-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
+		-- used for completion, annotations and signatures of Neovim apis
+		"folke/lazydev.nvim",
+		ft = "lua",
+		opts = {
+			library = {
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = "luvit-meta/library", words = { "vim%.uv" } },
+			},
+		},
+	},
+	{ "Bilal2453/luvit-meta", lazy = true },
+	{
+		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
@@ -358,19 +383,8 @@ require("lazy").setup({
 			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 			{ "j-hui/fidget.nvim", opts = {} },
 
-			-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
-			-- used for completion, annotations and signatures of Neovim apis
-			{
-				"folke/lazydev.nvim",
-				ft = "lua",
-				opts = {
-					library = {
-						-- Load luvit types when the `vim.uv` word is found
-						{ path = "luvit-meta/library", words = { "vim%.uv" } },
-					},
-				},
-			},
-			{ "Bilal2453/luvit-meta", lazy = true },
+			-- Allows extra capabilities provided by nvim-cmp
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
 			-- Brief aside: **What is LSP?**
@@ -518,7 +532,6 @@ require("lazy").setup({
 				gopls = {},
 				pyright = {},
 				biome = {
-
 					-- local util = require("lspconfig.util"),
 					root_dir = function(fname)
 						return require("lspconfig.util").root_pattern("biome.json", "biome.jsonc")(fname)
@@ -623,13 +636,10 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
-				-- python = { "ruff" },
+				-- python = {"ruff", "isort", "black" },
 				--
-				-- You can use a sub-list to tell conform to run *until* a formatter
-				-- is found.
-				-- javascript = { { "prettierd", "prettier" } },
-				-- javascript = { "biome" },
+				-- You can use 'stop_after_first' to run the first available formatter from the list
+				-- javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
 			},
 		},
 	},
@@ -769,49 +779,6 @@ require("lazy").setup({
 		end,
 	},
 
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {},
-		dependencies = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
-		},
-		config = function()
-			require("noice").setup({
-				lsp = {
-					-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-					override = {
-						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-						["vim.lsp.util.stylize_markdown"] = true,
-						["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
-					},
-				},
-				-- you can enable a preset for easier configuration
-				presets = {
-					bottom_search = true, -- use a classic bottom cmdline for search
-					command_palette = true, -- position the cmdline and popupmenu together
-					long_message_to_split = true, -- long messages will be sent to a split
-					inc_rename = false, -- enables an input dialog for inc-rename.nvim
-					lsp_doc_border = false, -- add a border to hover docs and signature help
-				},
-			})
-		end,
-	},
-
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("bufferline").setup()
-		end,
-	},
-
 	-- Highlight todo, notes, etc in comments
 	{
 		"folke/todo-comments.nvim",
@@ -870,12 +837,12 @@ require("lazy").setup({
 				"diff",
 				"html",
 				"lua",
-				"luadoc",
+				-- "luadoc",
 				"markdown",
 				"markdown_inline",
-				"query",
-				"vim",
-				"vimdoc",
+				-- "query",
+				-- "vim",
+				-- "vimdoc",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -892,7 +859,7 @@ require("lazy").setup({
 			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 
 			-- Prefer git instead of curl in order to improve connectivity in some environments
-			require("nvim-treesitter.install").prefer_git = true
+			-- require("nvim-treesitter.install").prefer_git = true
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup(opts)
 
@@ -902,6 +869,49 @@ require("lazy").setup({
 			--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 			--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+		end,
+	},
+
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+		config = function()
+			require("noice").setup({
+				lsp = {
+					-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+					override = {
+						["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+						["vim.lsp.util.stylize_markdown"] = true,
+						["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+					},
+				},
+				-- you can enable a preset for easier configuration
+				presets = {
+					bottom_search = true, -- use a classic bottom cmdline for search
+					command_palette = true, -- position the cmdline and popupmenu together
+					long_message_to_split = true, -- long messages will be sent to a split
+					inc_rename = false, -- enables an input dialog for inc-rename.nvim
+					lsp_doc_border = false, -- add a border to hover docs and signature help
+				},
+			})
+		end,
+	},
+
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("bufferline").setup()
 		end,
 	},
 

@@ -7,14 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "ui_font_size": 14,
-  // "buffer_font_size": 14,
+  "auto_update_extensions": {
+    "ruff": false
+  },
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
   // "ui_font_size": 13.5,
-  "buffer_font_size": 13.5,
-  // "ui_font_family": "JetBrains Mono",
-  // "buffer_font_family": "JetBrains Mono",
-  "theme": "Rosé Pine Moon",
-  "format_on_save": "on",
+  // "buffer_font_size": 13.5,
+  "theme": "Catppuccin Macchiato",
+  // "format_on_save": "on",
   "restore_on_startup": "last_workspace",
   // "auto_signature_help": true,
   "chat_panel": {
@@ -24,7 +25,7 @@
     "button": false
   },
   "assistant": {
-    "version": "1",
+    "version": "2",
     "button": false,
     "enabled": false
   },
@@ -41,6 +42,9 @@
     "git_status": true,
     "file_icons": true
   },
+  "file_types": {
+    "JSONC": ["tsconfig.json", "jsconfig.json", "*.json"]
+  },
   // "redact_private_values": true,
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "show_call_status_icon": false,
@@ -54,20 +58,38 @@
     "selected_symbol": true,
     "diagnostics": true
   },
-  // "formatter": "language_server",
+  // "formatter": "auto",
   "show_whitespaces": "boundary",
-  // "tab_size": 2,
+  "tab_size": 2,
   "languages": {
     "JavaScript": {
       "language_servers": [
+        "!typescript-language-server",
         "!eslint",
         "!prettier",
-        "!typescript-language-server",
         "..."
       ]
     },
     "C": {
       "format_on_save": "on"
+    },
+    "Python": {
+      "format_on_save": { "language_server": { "name": "ruff" } },
+      "language_servers": ["pyright", "ruff"],
+      "formatter": [
+        {
+          "code_actions": {
+            // Fix all auto-fixable lint violations
+            // "source.fixAll.ruff": true,
+            // Organize imports
+            "source.organizeImports.ruff": true
+          }
+        },
+        { "language_server": { "name": "ruff" } }
+      ]
+    },
+    "Go": {
+      "tab_size": 4
     }
   }
 }
