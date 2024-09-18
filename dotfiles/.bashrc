@@ -127,13 +127,16 @@ export PATH=$PATH:/usr/local/nvim/bin
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
-# PDM
-export PATH=~/.local/bin:$PATH
+# Android SDK
+export ANDROID_HOME=~/android_sdk
+
+# export ANDROID_SDK_ROOT=$ANDROID_HOME
+
+# export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 
 # Oh-My-Posh
 export PATH=~/.local/bin:$PATH
 eval "$(oh-my-posh init bash --config '~/custom.omp.json')"
 # eval "$(zellij setup --generate-auto-start bash)"
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
+. "$HOME/.cargo/env"
