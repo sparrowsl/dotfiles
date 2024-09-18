@@ -111,8 +111,7 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- keymap to toggle Nvimtree/Neotree
--- vim.keymap.set("n", "<C-b>", "<CMD>Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
+-- keymap to toggle Nvimtree
 vim.keymap.set("n", "<C-b>", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle Nvim tree" })
 
 -- [[ Basic Autocommands ]]
@@ -195,9 +194,7 @@ require("lazy").setup({
 		version = "*",
 		lazy = false,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("nvim-tree").setup({})
-		end,
+		opts = {},
 	},
 
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
@@ -394,7 +391,9 @@ require("lazy").setup({
 			},
 		},
 	},
+
 	{ "Bilal2453/luvit-meta", lazy = true },
+
 	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
@@ -557,20 +556,20 @@ require("lazy").setup({
 				gopls = {},
 				pyright = {},
 				biome = {
-					-- local util = require("lspconfig.util"),
+					util = require("lspconfig.util"),
 					root_dir = function(fname)
-						return require("lspconfig.util").root_pattern("biome.json", "biome.jsonc")(fname)
-							or require("lspconfig.util").find_package_json_ancestor(fname)
-							or require("lspconfig.util").find_node_modules_ancestor(fname)
-							or require("lspconfig.util").find_git_ancestor(fname)
+						return util.root_pattern("biome.json", "biome.jsonc")(fname)
+							or util.find_package_json_ancestor(fname)
+							or util.find_node_modules_ancestor(fname)
+							or util.find_git_ancestor(fname)
 					end,
 				},
 				-- cssls = {},
-				-- html = {},
+				html = {},
 				-- prismals = {},
 				-- sqlfmt = {},
 				jsonls = {},
-				ruff_lsp = {},
+				ruff = {},
 				svelte = {},
 				tailwindcss = {},
 				-- dockerls = {},
@@ -816,7 +815,7 @@ require("lazy").setup({
 	{
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		-- dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
 
@@ -860,6 +859,7 @@ require("lazy").setup({
 			--  Check out: https://github.com/echasnovski/mini.nvim
 		end,
 	},
+
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -937,9 +937,7 @@ require("lazy").setup({
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("bufferline").setup()
-		end,
+		opts = {},
 	},
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
