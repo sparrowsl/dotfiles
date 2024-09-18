@@ -1,0 +1,102 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "auto_install_extensions": {
+    "ruff": true
+  },
+  "auto_update_extensions": {
+    "ruff": true
+  },
+  "ui_font_size": 15,
+  "buffer_font_size": 14,
+  // "ui_font_size": 13.5,
+  // "buffer_font_size": 13.7,
+  "theme": "Catppuccin Frappé - No Italics",
+  "buffer_font_family": "FiraCode Nerd Font",
+  // "buffer_font_weight": 300,
+  // "format_on_save": "on",
+  "restore_on_startup": "last_workspace",
+  "auto_signature_help": false,
+  "chat_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "assistant": {
+    "version": "2",
+    "button": false,
+    "enabled": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "terminal": {
+    "button": false
+  },
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "file_types": {
+    "JSONC": ["tsconfig.json", "jsconfig.json", "*.json"]
+  },
+  // "redact_private_values": true,
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "show_call_status_icon": false,
+  "soft_wrap": "editor_width",
+  "autosave": "on_focus_change",
+  "scrollbar": {
+    "show": "auto",
+    "cursors": false,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": true
+  },
+  // "formatter": "auto",
+  "show_whitespaces": "boundary",
+  "tab_size": 2,
+  "languages": {
+    "JavaScript": {
+      "language_servers": [
+        "!typescript-language-server",
+        "!eslint",
+        "!prettier",
+        "..."
+      ],
+      "code_actions_on_format": {
+        "source.organizeImports.biome": true
+      }
+    },
+    "C": {
+      "format_on_save": "on"
+    },
+    "Python": {
+      "wrap_guides": [80],
+      "tab_size": 4,
+      "format_on_save": { "language_server": { "name": "ruff" } },
+      "language_servers": ["pyright", "ruff"],
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true
+          }
+        },
+        { "language_server": { "name": "ruff" } }
+      ]
+    },
+    "Go": {
+      "tab_size": 4
+    }
+  }
+}
