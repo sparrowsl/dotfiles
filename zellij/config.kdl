@@ -368,4 +368,4 @@ copy_on_select false
 // metadata info on this session)
 // Default: false
 //
-// disable_session_metadata true
+disable_session_metadata true
