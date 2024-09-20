@@ -111,8 +111,8 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- keymap to toggle Nvimtree
-vim.keymap.set("n", "<C-b>", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle Nvim tree" })
+-- keymap to toggle neo-tree.nvim
+vim.keymap.set("n", "<C-b>", "<CMD>Neotree toggle action=show<CR>", { desc = "Toggle Neotree" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -190,13 +190,15 @@ require("lazy").setup({
 	},
 
 	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = false,
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {},
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			-- "nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		},
 	},
-
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
 	-- This is often very useful to both group configuration, as well as handle
@@ -668,10 +670,10 @@ require("lazy").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
-				-- python = {"ruff", "isort", "black" },
+				python = { "ruff", stop_after_first = true },
 				--
 				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "biome", "prettierd", "prettier", stop_after_first = true },
+				javascript = { "biome", "prettier", stop_after_first = true },
 			},
 		},
 	},
