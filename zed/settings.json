@@ -18,9 +18,12 @@
   "unnecessary_code_fade": 0.5,
   "ui_font_size": 14,
   "buffer_font_size": 14,
-  "theme": "Catppuccin Frappé - No Italics",
+  "theme": "Catppuccin Frappé",
   "buffer_font_family": "FiraCode Nerd Font",
-  "buffer_font_fallbacks": ["Zed Plex Mono", "Noto Mono"],
+  "buffer_font_fallbacks": [
+    "Zed Plex Mono",
+    "Noto Mono"
+  ],
   "restore_on_startup": "last_workspace",
   "auto_signature_help": false,
   "chat_panel": {
@@ -48,7 +51,10 @@
     "file_icons": true
   },
   "file_types": {
-    "JSONC": ["jsconfig.json", "..."]
+    "JSONC": [
+      "jsconfig.json",
+      "..."
+    ]
   },
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "show_call_status_icon": false,
@@ -58,7 +64,11 @@
   "scrollbar": {
     "cursors": false
   },
-  "file_scan_exclusions": ["**/node_modules", "**/.svelte-kit", "..."],
+  "file_scan_exclusions": [
+    "**/node_modules",
+    "**/.svelte-kit",
+    "..."
+  ],
   "show_whitespaces": "boundary",
   "tab_size": 2,
   // "relative_line_numbers": true,
@@ -68,24 +78,23 @@
     "singleQuote": false
   },
   "languages": {
-    // "JavaScript": {
-    //   // "language_servers": ["!eslint", "!prettier", "..."],
-    //   "code_actions_on_format": {
-    //     "source.organizeImports.biome": true
-    //   }
-    // },
     "C": {
       "format_on_save": "on"
     },
     "Python": {
-      "wrap_guides": [80],
+      "wrap_guides": [
+        80
+      ],
       "tab_size": 4,
       "format_on_save": {
         "language_server": {
           "name": "ruff"
         }
       },
-      "language_servers": ["pyright", "ruff"],
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ],
       "formatter": [
         {
           "code_actions": {
