@@ -199,6 +199,7 @@ require("lazy").setup({
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
 	},
+
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
 	-- This is often very useful to both group configuration, as well as handle
@@ -264,6 +265,7 @@ require("lazy").setup({
 				{ "<leader>w", group = "[W]orkspace" },
 				{ "<leader>t", group = "[T]oggle" },
 				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
+				{ "<leader>b", group = "[B]uffers", mode = { "n" } },
 			},
 		},
 	},
@@ -937,8 +939,21 @@ require("lazy").setup({
 	{
 		"akinsho/bufferline.nvim",
 		version = "*",
+		event = "VeryLazy",
 		dependencies = "nvim-tree/nvim-web-devicons",
-		opts = {},
+		opts = {
+			options = {
+				diagnostics = "nvim_lsp", -- or "coc"
+
+				diagnostics_indicator = function(count, level, _, _)
+					local icon = level:match("error") and " " or " "
+					return " " .. icon .. count
+				end,
+			},
+		},
+		keys = {
+			{ "<leader>bd", "<Cmd>:bd<CR>", desc = "Delete Current Buffer" },
+		},
 	},
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
