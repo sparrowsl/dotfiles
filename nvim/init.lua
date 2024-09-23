@@ -26,7 +26,7 @@ vim.g.zig_fmt_autosave = 0
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
@@ -112,7 +112,7 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- keymap to toggle neo-tree.nvim
-vim.keymap.set("n", "<C-b>", "<CMD>Neotree toggle action=show<CR>", { desc = "Toggle Neotree" })
+vim.keymap.set("n", "<C-b>", "<CMD>Neotree toggle<CR>", { desc = "Toggle Neotree" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -558,12 +558,11 @@ require("lazy").setup({
 				gopls = {},
 				pyright = {},
 				biome = {
-					util = require("lspconfig.util"),
 					root_dir = function(fname)
-						return util.root_pattern("biome.json", "biome.jsonc")(fname)
-							or util.find_package_json_ancestor(fname)
-							or util.find_node_modules_ancestor(fname)
-							or util.find_git_ancestor(fname)
+						return require("lspconfig.util").root_pattern("biome.json", "biome.jsonc")(fname)
+							or require("lspconfig.util").find_package_json_ancestor(fname)
+							or require("lspconfig.util").find_node_modules_ancestor(fname)
+							or require("lspconfig.util").find_git_ancestor(fname)
 					end,
 				},
 				-- cssls = {},

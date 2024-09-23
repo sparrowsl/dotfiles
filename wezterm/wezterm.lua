@@ -20,14 +20,14 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- config.window_background_image = '/path/to/wallpaper.jpg'
 
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.95
 
 config.font = wezterm.font_with_fallback({
 	"JetBrains Mono",
 	"Roboto",
 })
 
-config.font_size = 10.0
+config.font_size = 10
 
 config.automatically_reload_config = true
 
