@@ -39,5 +39,19 @@ config.window_decorations = "RESIZE"
 
 config.window_close_confirmation = "NeverPrompt"
 
+-- Custom keymaps
+config.keys = {
+	{
+		key = "-",
+		mods = "ALT",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "/",
+		mods = "ALT",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
