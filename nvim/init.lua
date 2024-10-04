@@ -189,7 +189,7 @@ require("lazy").setup({
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
-		lazy = false,
+		lazy = true,
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
@@ -570,10 +570,10 @@ require("lazy").setup({
 							or require("lspconfig.util").find_git_ancestor(fname)
 					end,
 				},
+				emmet_language_server = {},
 				-- cssls = {},
-				html = {},
+				-- html = {},
 				-- prismals = {},
-				-- sqlfmt = {},
 				jsonls = {},
 				ruff = {},
 				svelte = {},
@@ -587,8 +587,7 @@ require("lazy").setup({
 				--    https://github.com/pmizio/typescript-tools.nvim
 				--
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
-				-- ts_ls = {},
-
+				ts_ls = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
