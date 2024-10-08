@@ -78,6 +78,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.opt.tabstop = 2
+-- vim.opt.softtab = 2
+-- vim.opt.shiftwidth = 2
+-- vim.bo.expandtab = true
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -125,14 +130,17 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-for _, ext in ipairs({ "go", "py" }) do
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "*.*" },
+	command = "set smartindent expandtab tabstop=2 softtabstop=2 shiftwidth=2 autoindent smarttab",
+})
+
+for _, ext in ipairs({ "go", "py", "zig" }) do
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = ext,
-		command = "set smartindent noexpandtab tabstop=4 shiftwidth=4",
+		command = "set smartindent expandtab tabstop=4 shiftwidth=4",
 	})
 end
-
-vim.opt.tabstop = 2
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -571,10 +579,10 @@ require("lazy").setup({
 					end,
 				},
 				emmet_language_server = {},
-				-- cssls = {},
-				-- html = {},
 				-- prismals = {},
 				jsonls = {},
+				html = {},
+				cssls = {},
 				ruff = {},
 				svelte = {},
 				tailwindcss = {},
