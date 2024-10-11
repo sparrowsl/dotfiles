@@ -13,103 +13,58 @@
   },
   "auto_update_extensions": {
     "biome": false,
-    "ruff": true
+    "ruff": true,
+    "svelte": true
   },
   "unnecessary_code_fade": 0.5,
   "ui_font_size": 14,
-  "buffer_font_size": 14,
-  "theme": "Catppuccin Frappé",
-  "buffer_font_family": "FiraCode Nerd Font",
-  "buffer_font_fallbacks": [
-    "Zed Plex Mono",
-    "Noto Mono"
-  ],
+  "buffer_font_size": 13.5,
+  "theme": "Rosé Pine Moon",
+  "buffer_font_fallbacks": ["FiraCode Nerd Font", "JetBrainsMono Nerd Font"],
   "restore_on_startup": "last_workspace",
   "auto_signature_help": false,
-  "chat_panel": {
-    "button": false
-  },
-  "collaboration_panel": {
-    "button": false
-  },
+  "chat_panel": { "button": false },
+  "collaboration_panel": { "button": false },
   "assistant": {
     "version": "2",
     "button": false,
     "enabled": false
   },
-  "notification_panel": {
-    "button": false
-  },
-  "outline_panel": {
-    "button": false
-  },
-  "terminal": {
-    "button": false
-  },
+  "notification_panel": { "button": false },
+  "outline_panel": { "button": false },
+  "terminal": { "button": false },
   "tabs": {
     "git_status": true,
     "file_icons": true
-  },
-  "file_types": {
-    "JSONC": [
-      "jsconfig.json",
-      "..."
-    ]
   },
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "show_call_status_icon": false,
   "soft_wrap": "editor_width",
   "autosave": "on_focus_change",
-  // "extend_comment_on_newline": false,
   "scrollbar": {
     "cursors": false
   },
-  "file_scan_exclusions": [
-    "**/node_modules",
-    "**/.svelte-kit",
-    "..."
-  ],
   "show_whitespaces": "boundary",
   "tab_size": 2,
   // "relative_line_numbers": true,
-  "prettier": {
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": false
-  },
   "languages": {
-    "C": {
-      "format_on_save": "on"
-    },
+    "C": { "format_on_save": "on" },
     "Python": {
-      "wrap_guides": [
-        80
-      ],
+      "wrap_guides": [80],
       "tab_size": 4,
       "format_on_save": {
-        "language_server": {
-          "name": "ruff"
-        }
+        "language_server": { "name": "ruff" }
       },
-      "language_servers": [
-        "pyright",
-        "ruff"
-      ],
+      "language_servers": ["pyright", "ruff"],
       "formatter": [
         {
           "code_actions": {
             "source.organizeImports.ruff": true
           }
         },
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        }
+        { "language_server": { "name": "ruff" } }
       ]
     },
-    "Go": {
-      "tab_size": 4
-    }
+    "Go": { "tab_size": 4 }
   }
 }

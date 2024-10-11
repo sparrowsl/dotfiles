@@ -130,11 +130,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "*.*" },
-	command = "set smartindent expandtab tabstop=2 softtabstop=2 shiftwidth=2 autoindent smarttab",
-})
-
 for _, ext in ipairs({ "go", "py", "zig" }) do
 	vim.api.nvim_create_autocmd("FileType", {
 		pattern = ext,
