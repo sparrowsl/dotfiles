@@ -206,6 +206,21 @@ require("lazy").setup({
 		},
 	},
 
+	{
+		"nvim-flutter/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			-- 'stevearc/dressing.nvim', -- optional for vim.ui.select
+		},
+		config = true,
+		opts = {
+			widget_guides = {
+				enabled = true,
+			},
+		},
+	},
+
 	-- NOTE: Plugins can also be configured to run Lua code when they are loaded.
 	--
 	-- This is often very useful to both group configuration, as well as handle
