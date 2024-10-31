@@ -4,7 +4,6 @@
 // documentation: https://zed.dev/docs/configuring-zed
 {
   "auto_install_extensions": {
-    "ruff": true,
     "html": true,
     "svelte": true,
     "biome": true,
@@ -12,13 +11,12 @@
     "sql": true
   },
   "auto_update_extensions": {
-    "biome": false,
-    "ruff": true,
     "svelte": true
   },
   "unnecessary_code_fade": 0.5,
   "ui_font_size": 14,
   "buffer_font_size": 13.5,
+  // "buffer_line_height": "standard",
   "theme": "Rosé Pine Moon",
   "buffer_font_fallbacks": ["FiraCode Nerd Font", "JetBrainsMono Nerd Font"],
   "restore_on_startup": "last_workspace",
@@ -37,6 +35,16 @@
     "git_status": true,
     "file_icons": true
   },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings"
+  ],
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "show_call_status_icon": false,
   "soft_wrap": "editor_width",
@@ -46,7 +54,6 @@
   },
   "show_whitespaces": "boundary",
   "tab_size": 2,
-  // "relative_line_numbers": true,
   "languages": {
     "C": { "format_on_save": "on" },
     "Python": {
@@ -57,14 +64,15 @@
       },
       "language_servers": ["pyright", "ruff"],
       "formatter": [
+        { "language_server": { "name": "ruff" } },
         {
           "code_actions": {
             "source.organizeImports.ruff": true
           }
-        },
-        { "language_server": { "name": "ruff" } }
+        }
       ]
     },
-    "Go": { "tab_size": 4 }
+    "Go": { "tab_size": 4 },
+    "Zig": { "tab_size": 4 }
   }
 }
