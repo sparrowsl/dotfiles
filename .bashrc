@@ -132,7 +132,7 @@ export PATH=~/.local/bin:$PATH
 eval "$(oh-my-posh init bash --config '~/custom.omp.json')"
 
 # Autostart Zellij
-# eval "$(zellij setup --generate-auto-start bash)"
+eval "$(zellij setup --generate-auto-start bash)"
 
 . "$HOME/.cargo/env"
 
