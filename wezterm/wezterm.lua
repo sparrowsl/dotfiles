@@ -12,7 +12,8 @@ wezterm.on("gui-startup", function(cmd)
 end)
 
 -- For example, changing the color scheme:
-config.color_scheme = "rose-pine-moon"
+-- config.color_scheme = "Catppuccin Frappe"
+config.color_scheme = "Tokyo Night Moon"
 
 config.enable_tab_bar = false
 
@@ -40,18 +41,18 @@ config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 
 -- Custom keymaps
-config.keys = {
-	{
-		key = "-",
-		mods = "ALT",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "/",
-		mods = "ALT",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-}
+-- config.keys = {
+-- 	{
+-- 		key = "-",
+-- 		mods = "ALT",
+-- 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+-- 	},
+-- 	{
+-- 		key = "/",
+-- 		mods = "ALT",
+-- 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+-- 	},
+-- }
 
 -- and finally, return the configuration to wezterm
 return config
