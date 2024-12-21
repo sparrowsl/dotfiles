@@ -5,8 +5,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 --- optionally enable 24-bit colour
 vim.opt.termguicolors = true
@@ -26,7 +26,7 @@ vim.g.zig_fmt_autosave = 0
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
@@ -79,9 +79,8 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 vim.opt.tabstop = 2
--- vim.opt.softtab = 2
--- vim.opt.shiftwidth = 2
--- vim.bo.expandtab = true
+vim.opt.shiftwidth = 2
+vim.bo.expandtab = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -130,9 +129,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-for _, ext in ipairs({ "go", "py", "zig" }) do
+for _, extension in ipairs({ "go", "py", "zig" }) do
 	vim.api.nvim_create_autocmd("FileType", {
-		pattern = ext,
+		pattern = extension,
 		command = "set smartindent expandtab tabstop=4 shiftwidth=4",
 	})
 end
@@ -189,22 +188,22 @@ require("lazy").setup({
 		},
 	},
 
-	{
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = true,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		keys = {
-			{ "<leader>e", "<Cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-		},
-		opts = {
-			filters = {
-				dotfiles = true,
-			},
-		},
-	},
+	-- {
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	version = "*",
+	-- 	lazy = true,
+	-- 	dependencies = {
+	-- 		"nvim-tree/nvim-web-devicons",
+	-- 	},
+	-- 	keys = {
+	-- 		{ "<leader>e", "<Cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
+	-- 	},
+	-- 	opts = {
+	-- 		filters = {
+	-- 			dotfiles = true,
+	-- 		},
+	-- 	},
+	-- },
 
 	{
 		"nvim-flutter/flutter-tools.nvim",
@@ -298,6 +297,7 @@ require("lazy").setup({
 	--
 	-- Use the `dependencies` key to specify the dependencies of a particular plugin
 
+	-- TODO: swap to fzf-lua.nvim in the future
 	{ -- Fuzzy Finder (files, lsp, etc)
 		"nvim-telescope/telescope.nvim",
 		event = "VimEnter",
@@ -710,6 +710,7 @@ require("lazy").setup({
 		},
 	},
 
+	-- TODO: swap to blink.cmp in the future
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -950,6 +951,25 @@ require("lazy").setup({
 		},
 		keys = {
 			{ "<leader>bd", "<Cmd>:bd<CR>", desc = "Delete Current Buffer" },
+		},
+	},
+
+	{ "akinsho/git-conflict.nvim", version = "*", config = true, opts = {} },
+
+	{
+		"stevearc/oil.nvim",
+		keys = {
+			{ "-", "<Cmd>Oil --float<CR>", desc = "Open Oil.nvim", mode = "n" },
+		},
+		-- Optional dependencies
+		-- dependencies = { { "echasnovski/mini.icons", opts = {} } },
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+		opts = {
+			delete_to_trash = true,
+			keymaps = {
+				["<C-c>"] = false,
+				["q"] = "actions.close",
+			},
 		},
 	},
 
