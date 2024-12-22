@@ -554,15 +554,11 @@ require("lazy").setup({
 				gopls = {},
 				pyright = {},
 				biome = {
-					root_dir = function(fname)
-						return require("lspconfig.util").root_pattern("biome.json", "biome.jsonc")(fname)
-							or require("lspconfig.util").find_package_json_ancestor(fname)
-							or require("lspconfig.util").find_node_modules_ancestor(fname)
-							or require("lspconfig.util").find_git_ancestor(fname)
-					end,
+					root_dir = require("lspconfig.util").root_pattern("biome.json", "biome.jsonc"),
+					single_file_support = false,
 				},
 				emmet_language_server = {},
-				-- prismals = {},
+				prismals = {},
 				jsonls = {},
 				-- html = {},
 				-- cssls = {},
@@ -595,11 +591,6 @@ require("lazy").setup({
 				},
 			}
 
-			-- Ensure the servers and tools above are installed
-			--  To check the current status of installed tools and/or manually install
-			--  other tools, you can run
-			--    :Mason
-			--
 			--  You can press `g?` for help in this menu.
 			require("mason").setup()
 
@@ -684,7 +675,21 @@ require("lazy").setup({
 			-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
 			-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
 			-- See the full "keymap" documentation for information on defining your own keymap.
-			keymap = { preset = "enter" },
+			keymap = {
+				preset = "enter",
+
+				["<Tab>"] = {
+					function(cmp)
+						if cmp.snippet_active() then
+							return cmp.accept()
+						else
+							return cmp.select_and_accept()
+						end
+					end,
+					"snippet_forward",
+					"fallback",
+				},
+			},
 
 			appearance = {
 				use_nvim_cmp_as_default = true,
@@ -692,6 +697,10 @@ require("lazy").setup({
 			},
 
 			signature = { enabled = true },
+
+			sources = {
+				min_keyword_length = 2,
+			},
 		},
 	},
 
@@ -718,7 +727,6 @@ require("lazy").setup({
 	{
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
-		-- dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { signs = false },
 	},
 
@@ -837,7 +845,7 @@ require("lazy").setup({
 		},
 	},
 
-	{ "akinsho/git-conflict.nvim", version = "*", config = true, opts = {} },
+	{ "akinsho/git-conflict.nvim", version = "*", config = true },
 
 	{
 		"stevearc/oil.nvim",
