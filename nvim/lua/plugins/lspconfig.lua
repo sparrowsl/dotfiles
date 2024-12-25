@@ -9,7 +9,7 @@ return {
 
 		-- Useful status updates for LSP.
 		-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-		{ "j-hui/fidget.nvim", opts = {} },
+		-- { "j-hui/fidget.nvim", opts = {} },
 
 		-- Allows extra capabilities provided by blink.cmp
 		"saghen/blink.cmp",
@@ -167,6 +167,17 @@ return {
 			gopls = {},
 			pyright = {},
 			biome = {
+				filetypes = {
+					"astro",
+					"css",
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"json",
+					"jsonc",
+					"typescript.tsx",
+					"typescriptreact",
+				},
 				root_dir = require("lspconfig.util").root_pattern("biome.json", "biome.jsonc"),
 				single_file_support = false,
 			},

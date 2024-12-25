@@ -26,7 +26,17 @@ return {
 			nerd_font_variant = "mono",
 		},
 
-		signature = { enabled = true },
-		-- sources = { min_keyword_length = 2 },
+		signature = {
+			enabled = true,
+		},
+		completion = {
+			ghost_text = {
+				enabled = false,
+			},
+		},
+		sources = {
+			-- min_keyword_length = 2,
+			cmdline = {},
+		},
 	},
 }
