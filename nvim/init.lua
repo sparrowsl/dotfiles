@@ -24,10 +24,12 @@ require("lazy").setup({
 	require("plugins.treesitter"),
 	-- require("plugins.lualine"),
 	-- require("plugins.flutter"),
-	require("plugins.telescope"),
+	-- require("plugins.telescope"),
+	require("plugins.fzf-lua"),
 	require("plugins.lspconfig"),
 	require("plugins.conform"),
 	-- require("plugins.indent-blankline"),
 	require("plugins.misc"),
+	-- require("plugins.noice"),
 	require("plugins.mini"),
 })
