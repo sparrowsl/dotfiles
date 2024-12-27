@@ -142,8 +142,8 @@ return {
 			-- dockerls = {},
 			-- zls = {},
 			-- rust_analyzer = {},
-			-- ts_ls = {},
-			vtsls = {},
+			ts_ls = {},
+			-- vtsls = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},

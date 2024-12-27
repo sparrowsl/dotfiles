@@ -15,7 +15,9 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("plugins.tokyonight"),
+	-- require("plugins.tokyonight"),
+	-- require("plugins.catppuccin"),
+	require("plugins.rose-pine"),
 	require("plugins.oil"),
 	require("plugins.blink"),
 	require("plugins.bufferline"),
