@@ -6,4 +6,6 @@ return {
 
 	-- Highlight todo, notes, etc in comments
 	{ "folke/todo-comments.nvim", opts = {} },
+
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 }

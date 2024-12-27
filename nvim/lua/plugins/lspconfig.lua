@@ -129,9 +129,7 @@ return {
 			},
 			-- prismals = {},
 			jsonls = {},
-			html = {
-				filetypes = { "html" },
-			},
+			html = {},
 			cssls = {
 				filetypes = { "css" },
 			},
@@ -140,24 +138,7 @@ return {
 			},
 			-- ruff = {},
 			svelte = {},
-			tailwindcss = {
-				filetypes = {
-					-- html
-					-- 'astro',
-					"html",
-					-- CSS
-					"css",
-					-- JS
-					"javascript",
-					"javascriptreact",
-					"typescript",
-					"typescriptreact",
-					-- Mixed
-					-- 'vue',
-					"svelte",
-				},
-				includeLanguages = {},
-			},
+			tailwindcss = {},
 			-- dockerls = {},
 			-- zls = {},
 			-- rust_analyzer = {},

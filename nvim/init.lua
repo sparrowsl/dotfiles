@@ -28,8 +28,8 @@ require("lazy").setup({
 	require("plugins.fzf-lua"),
 	require("plugins.lspconfig"),
 	require("plugins.conform"),
-	-- require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	-- require("plugins.noice"),
 	require("plugins.mini"),
+	require("plugins.neo-tree"),
 })

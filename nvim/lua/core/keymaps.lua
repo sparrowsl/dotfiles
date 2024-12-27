@@ -4,7 +4,6 @@ vim.g.maplocalleader = " "
 
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true }) -- Disable the spacebar key's default behavior
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { noremap = true, silent = true }) -- save file
--- vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { noremap = true, silent = true, desc = "Delete Current Buffer" })-- delete current buffer
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") -- Set highlight on search, but clear on pressing <Esc> in normal mode
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -41,5 +40,4 @@ vim.keymap.set(
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
--- vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+-- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
