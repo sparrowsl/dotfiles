@@ -3,11 +3,9 @@
 
 # Needed for all installers (update system)
 sudo apt update -y
-sudo apt install -y curl unzip xclip mpv wget tar fzf ripgrep btop fd peek geary gthumb guake
+sudo apt install -y curl unzip xclip mpv wget tar fzf ripgrep btop fd peek geary gthumb
 
-
-
-# Install git
+# Install Git
 sudo add-apt-repository ppa:git-core/ppa 
 sudo apt update -y 
 sudo apt install -y git
@@ -29,9 +27,6 @@ curl -fsSL https://bun.sh/install | bash
 # Upgrade Bun
 bun upgrade
 
-# Install PDM (Python Dependencies Manager)
-curl -sSL https://pdm-project.org/install-pdm.py | python3 -
-
 # Install Github CLI
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
 && sudo mkdir -p -m 755 /etc/apt/keyrings \
@@ -46,13 +41,12 @@ sudo apt update
 sudo apt install gh
 
 
-
 # Download latest neovim and setup
 cd /tmp/
 wget -c github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-tar -xvzf nvim-linux64.tar.gz
+tar -xvzf nvim-linux64.tar.gz nvim
 # Rename directory
-mv nvim-linux64.tar.gz nvim/
+mv nvim-linux64 nvim/
 # Delete old nvim directory
 sudo rm -rf /usr/bin/nvim/
 # Move current nvim to bin
@@ -69,6 +63,12 @@ cd -
 # Install Zed editor
 curl -f https://zed.dev/install.sh | sh
 
+# Install Starship
+curl -sS https://starship.rs/install.sh | sh
+
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Install Zellij
 cd ~/Downloads
 wget -O zellij.tar.gz "https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz"
@@ -77,14 +77,6 @@ sudo install zellij /usr/local/bin/
 rm zellij.tar.gz
 cd -
 
-# Install Typora (Markdown Editor)
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
-wget -qO - https://typora.io/linux/public-key.asc | sudo tee /etc/apt/trusted.gpg.d/typora.asc
-# add Typora's repository
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-sudo apt update
-# install typora
-sudo apt install typora
 
 # Install Brave browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
