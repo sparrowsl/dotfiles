@@ -127,12 +127,5 @@ export CHROME_EXECUTABLE="/usr/bin/opera"
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
-# Oh-My-Posh
-export PATH=~/.local/bin:$PATH
-eval "$(oh-my-posh init bash --config '~/custom.omp.json')"
-
-# Autostart Zellij
-eval "$(zellij setup --generate-auto-start bash)"
-
-. "$HOME/.cargo/env"
+eval "$(starship init bash)"
 
