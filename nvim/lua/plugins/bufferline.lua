@@ -6,9 +6,6 @@ return {
 	opts = {
 		options = {
 			mode = "buffers", -- set to "tabs" to only show tabpages instead
-			themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
-			numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
-			close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 			buffer_close_icon = "✗",
 			-- modified_icon = "●",
 			close_icon = "✗",
@@ -19,7 +16,6 @@ return {
 				local icon = level:match("error") and " " or " "
 				return " " .. icon .. count
 			end,
-			show_tab_indicators = false,
 		},
 	},
 	keys = {

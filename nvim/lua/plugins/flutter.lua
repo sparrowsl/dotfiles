@@ -3,12 +3,16 @@ return {
 	lazy = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		-- 'stevearc/dressing.nvim', -- optional for vim.ui.select
 	},
 	config = true,
 	opts = {
 		widget_guides = {
-			enabled = true,
+			-- enabled = true,
+		},
+		lsp = {
+			colors = {
+				enabled = true,
+			},
 		},
 	},
 }
