@@ -18,13 +18,6 @@ return {
 		{ "<leader>hi", "<cmd>Gitsigns preview_hunk_inline<CR>", desc = "Git [H]unk Preview [I]nline", mode = "n" },
 		{ "<leader>hr", "<cmd>Gitsigns reset_hunk<CR>", desc = "Git [H]unk [R]eset", mode = "n" },
 		{ "<leader>hs", "<cmd>Gitsigns select_hunk<CR>", desc = "Git [H]unk [S]elect", mode = "n" },
-		{
-			"<leader>hn",
-			function()
-				require("gitsigns").nav_hunk({ "next" })
-			end,
-			desc = "Git [H]unk [S]elect",
-			mode = "n",
-		},
+		{ "<leader>hn", "<cmd>Gitsigns next_hunk<CR>", desc = "Git [H]unk [N]ext", mode = "n" },
 	},
 }

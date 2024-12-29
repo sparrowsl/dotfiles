@@ -10,22 +10,14 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt update -y 
 sudo apt install -y git
 
-# Install NPM
-sudo apt install npm
-# Update NPM version
-sudo npm install -g npm@latest
-# Install N (node version manager)
-sudo npm install -g n@latest
-# Install node LTS
-sudo n lts
-# Remove old node versions
-sudo n prune
+
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+# Download and install Node.js stable version:
+nvm install --lts
 
 # Install Bun
 curl -fsSL https://bun.sh/install | bash
-
-# Upgrade Bun
-bun upgrade
 
 # Install Github CLI
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
