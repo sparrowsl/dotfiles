@@ -5,7 +5,6 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
-
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = wezterm.mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
@@ -35,7 +34,9 @@ config.automatically_reload_config = true
 
 config.detect_password_input = true
 
-config.enable_scroll_bar = false
+config.default_cursor_style = "BlinkingBar"
+
+-- config.enable_scroll_bar = true
 
 config.window_decorations = "RESIZE"
 

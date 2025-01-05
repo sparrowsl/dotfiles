@@ -1,0 +1,16 @@
+theme = rose-pine
+font-size = 10
+cursor-style = bar
+window-padding-x = 10
+window-decoration = false
+# window-save-state = always
+clipboard-trim-trailing-spaces = true
+gtk-single-instance = true
+gtk-titlebar = false
+gtk-adwaita = false
+
+# ===== Keybindings ===== #
+keybind = alt+-=new_split:right
+keybind = alt+/=new_split:down
+keybind = ctrl+]=goto_split:next
+
