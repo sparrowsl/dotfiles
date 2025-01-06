@@ -8,6 +8,6 @@ return {
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	keys = {
-		{ "<leader>e", "<cmd>Neotree toggle float<CR>", desc = "NeoTree reveal", silent = true },
+		{ "<leader>e", "<cmd>Neotree toggle reveal<CR>", desc = "NeoTree reveal", silent = true },
 	},
 }

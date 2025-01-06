@@ -24,7 +24,7 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.which-key"),
 	-- require("plugins.lualine"),
-	-- require("plugins.flutter"),
+	require("plugins.flutter"),
 	-- require("plugins.telescope"),
 	require("plugins.fzf-lua"),
 	require("plugins.lspconfig"),
