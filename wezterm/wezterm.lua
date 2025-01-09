@@ -19,6 +19,8 @@ config.enable_tab_bar = false
 
 config.hide_tab_bar_if_only_one_tab = true
 
+config.max_fps = 200
+
 -- config.window_background_image = '/path/to/wallpaper.jpg'
 
 config.window_background_opacity = 0.99
