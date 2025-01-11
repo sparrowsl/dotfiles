@@ -9,6 +9,7 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 error_symbol = '[✗](bold red)'
 
 [cmd_duration]
+disabled = true
 style = 'dimmed gray'
 
 [directory]

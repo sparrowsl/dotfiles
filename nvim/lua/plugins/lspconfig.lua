@@ -3,7 +3,8 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
-		{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+		-- Mason must be loaded before its dependents so we need to set it up here.
+		{ "williamboman/mason.nvim", opts = {} },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 
@@ -173,7 +174,13 @@ return {
 				},
 			},
 			-- dockerls = {},
-			-- zls = {},
+			-- zls = {
+			-- 	settings={
+			-- 		zls={
+			-- 		-- enable_build_on_save = true,
+			-- 		}
+			-- 	}
+			-- },
 			-- rust_analyzer = {},
 			-- ts_ls = {},
 			vtsls = {},
@@ -197,9 +204,6 @@ return {
 				},
 			},
 		}
-
-		--  You can press `g?` for help in this menu.
-		require("mason").setup()
 
 		-- You can add other tools here that you want Mason to install
 		-- for you, so that they are available from within Neovim.

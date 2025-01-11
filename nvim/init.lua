@@ -29,9 +29,9 @@ require("lazy").setup({
 	require("plugins.fzf-lua"),
 	require("plugins.lspconfig"),
 	require("plugins.conform"),
-	-- require("plugins.noice"),
+	require("plugins.noice"),
 	require("plugins.mini"),
 	require("plugins.neo-tree"),
-	require("plugins.oil"),
+	-- require("plugins.oil"),
 	require("plugins.misc"),
 })

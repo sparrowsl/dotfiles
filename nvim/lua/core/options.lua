@@ -1,5 +1,7 @@
 vim.g.have_nerd_font = true
-vim.g.zig_fmt_autosave = 0 -- Avoid crashing on zig due to zig-vim issues
+
+vim.g.zig_fmt_autosave = 0 -- disable format on save from ziglang/zig.vim
+vim.g.zig_fmt_parse_errors = 0 -- don't show parse errors in a separate window
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1

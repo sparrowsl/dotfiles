@@ -1,6 +1,6 @@
 return {
 	"nvim-flutter/flutter-tools.nvim",
-	lazy = false,
+	ft = "dart",
 	ependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -17,7 +17,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>fr", "<CMD> <CR>", desc = "[F]lutter [R]eload running project", mode = "n" },
-		{ "<leader>fR", "<CMD> <CR>", desc = "[F]lutter [R]estart current project", mode = "n" },
+		{ "<leader>rr", "<CMD> <CR>", desc = "[R]eload [R]unning project", mode = "n" },
+		{ "<leader>rs", "<CMD> <CR>", desc = "[R]e[s]tart current flutter project", mode = "n" },
 	},
 }

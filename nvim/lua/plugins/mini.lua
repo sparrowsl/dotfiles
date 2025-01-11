@@ -6,6 +6,8 @@ return {
 
 		require("mini.notify").setup()
 
+		require("mini.comment").setup()
+
 		-- require("mini.ai").setup({ n_lines = 500 })
 
 		-- require("mini.surround").setup()
@@ -13,7 +15,7 @@ return {
 		require("mini.pairs").setup()
 
 		local statusline = require("mini.statusline")
-		statusline.setup({ use_icons = vim.g.have_nerd_font })
+		statusline.setup({ use_icons = vim.g.have_nerd_font, lazy = false })
 
 		-- cursor location to LINE:COLUMN
 		---@diagnostic disable-next-line: duplicate-set-field
