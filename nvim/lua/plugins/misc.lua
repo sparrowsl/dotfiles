@@ -2,7 +2,14 @@ return {
 	-- Detect tabstop and shiftwidth automatically
 	{ "tpope/vim-sleuth" },
 
-	-- { "akinsho/git-conflict.nvim", lazy = true, version = "*", opts = {} },
+	{
+		"akinsho/git-conflict.nvim",
+		lazy = true,
+		version = "*",
+		opts = {
+			disable_diagnostics = true,
+		},
+	},
 
 	{ "folke/lazydev.nvim", ft = "lua", opts = {} },
 
