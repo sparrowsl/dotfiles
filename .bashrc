@@ -116,10 +116,17 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=$PATH:/usr/local/bin/flutter/bin
+export ANDROID_HOME=~/android_sdk # needed for commandline-tools
+# export ANDROID_SDK_ROOT=$ANDROID_HOME
+# export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+
 export PATH=$PATH:/usr/local/bin/node/bin
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin # needed for apps installed using Go
+
 export PATH=$PATH:/usr/local/nvim/bin
+
 export CHROME_EXECUTABLE="/usr/bin/opera"
 
 # export PS1='\e[1;36m(\e[0m\e[1;32m\u@\h\e[0m\e[1;36m)-[\e[0m\e[1;34m\w\e[0m\e[1;36m]\e[0m\e[0;33m$(__git_ps1 " (%s)")\e[0m\n$ '
