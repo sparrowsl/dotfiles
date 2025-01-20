@@ -33,7 +33,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "ruff", stop_after_first = true },
-			javascript = { "biome", "prettier", stop_after_first = true },
+			javascript = { "biome", "prettierd", stop_after_first = true },
 		},
 	},
 }

@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("mini.animate").setup()
 
-		require("mini.notify").setup()
+		-- require("mini.notify").setup()
 
 		require("mini.comment").setup()
 

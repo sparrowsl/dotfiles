@@ -11,6 +11,19 @@ return {
 		},
 	},
 
+	{
+		"sindrets/diffview.nvim",
+		lazy = true,
+		opts = {
+			view = {
+				merge_tool = {
+					layout = "diff3_mixed",
+					-- disable_diagnostics = true,
+				},
+			},
+		},
+	},
+
 	{ "folke/lazydev.nvim", ft = "lua", opts = {} },
 
 	-- Highlight todo, notes, etc in comments
