@@ -25,7 +25,7 @@ return {
 				selection = { auto_insert = false },
 			},
 
-			ghost_text = { enabled = true },
+			-- ghost_text = { enabled = true },
 			menu = { auto_show = true },
 		},
 		sources = {

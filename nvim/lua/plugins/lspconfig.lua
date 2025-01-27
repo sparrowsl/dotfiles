@@ -120,6 +120,7 @@ return {
 				root_dir = require("lspconfig.util").root_pattern("biome.json", "biome.jsonc"),
 				single_file_support = true,
 			},
+			prettierd = {},
 			emmet_language_server = {
 				filetypes = {
 					"css",
