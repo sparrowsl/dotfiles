@@ -4,25 +4,26 @@ return {
 
 	{
 		"akinsho/git-conflict.nvim",
-		lazy = true,
+		-- lazy = true,
+		event = "VeryLazy",
 		version = "*",
 		opts = {
 			disable_diagnostics = true,
 		},
 	},
 
-	{
-		"sindrets/diffview.nvim",
-		lazy = true,
-		opts = {
-			view = {
-				merge_tool = {
-					layout = "diff3_mixed",
-					-- disable_diagnostics = true,
-				},
-			},
-		},
-	},
+	-- {
+	-- 	"sindrets/diffview.nvim",
+	-- 	-- lazy = true,
+	-- 	opts = {
+	-- 		view = {
+	-- 			merge_tool = {
+	-- 				layout = "diff3_mixed",
+	-- 				-- disable_diagnostics = true,
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 
 	{ "folke/lazydev.nvim", ft = "lua", opts = {} },
 
