@@ -1,11 +1,11 @@
 theme = rose-pine-moon
-font-size = 10
+# font-size = 10
 cursor-style = bar
 # window-padding-x = 5
 window-decoration = false
 clipboard-trim-trailing-spaces = true
 gtk-single-instance = true
-gtk-titlebar = false
+# gtk-titlebar = false
 # gtk-adwaita = false
 gtk-tabs-location = hidden
 adw-toolbar-style = flat
