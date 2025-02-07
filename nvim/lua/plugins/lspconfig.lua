@@ -107,7 +107,7 @@ return {
 			pyright = {},
 			biome = {
 				filetypes = {
-					-- "css",
+					"css",
 					"javascript",
 					"javascriptreact",
 					"json",
@@ -182,7 +182,7 @@ return {
 			-- 		}
 			-- 	}
 			-- },
-			-- rust_analyzer = {},
+			rust_analyzer = {},
 			-- ts_ls = {},
 			vtsls = {},
 			lua_ls = {

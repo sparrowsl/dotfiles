@@ -4,7 +4,7 @@
 sudo dnf update
 
 # Install common tools
-sudo dnf install curl unzip mpv wget tar fzf ripgrep btop fd peek geary gthumb gh git neovim fastfetch
+sudo dnf install curl unzip mpv wget tar fzf ripgrep btop fd geary gthumb gh git fastfetch
 
 # Install Bun
 # curl -fsSL https://bun.sh/install | bash
@@ -18,9 +18,6 @@ sudo dnf install code
 # Install Zed editor
 curl -f https://zed.dev/install.sh | sh
 
-# Install languages, runtimes
-sudo dnf install golang nodejs # zig
-
 # Install Starship
 curl -sS https://starship.rs/install.sh | sh
 
@@ -28,8 +25,8 @@ curl -sS https://starship.rs/install.sh | sh
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Install Ghostty
-dnf copr enable pgdev/ghostty
-dnf install ghostty
+sudo dnf copr enable pgdev/ghostty
+sudo dnf install ghostty
 
 # Install Brave browser
 curl -fsS https://dl.brave.com/install.sh | sh
@@ -38,12 +35,12 @@ curl -fsS https://dl.brave.com/install.sh | sh
 sudo dnf install sqlite sqlitebrowser
 
 # Install PostgreSQL
-dnf install postgresql-server
+sudo dnf install postgresql-server
 
 # Post Installation, auto activate postgresql.service
-postgresql-setup --initdb
-systemctl enable postgresql.service
-systemctl start postgresql.service
+sudo postgresql-setup --initdb
+sudo systemctl enable postgresql.service
+sudo systemctl start postgresql.service
 
 # Install LibreWolf
 curl -fsSL https://repo.librewolf.net/librewolf.repo | pkexec tee /etc/yum.repos.d/librewolf.repo
@@ -52,4 +49,4 @@ sudo dnf install librewolf
 
 sudo dnf autoremove
 sudo dnf clean all
-sudo reboot
+# sudo reboot
