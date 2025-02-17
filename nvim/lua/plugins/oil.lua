@@ -1,8 +1,15 @@
 return {
 	"stevearc/oil.nvim",
+	event = "VeryLazy",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
-		delete_to_trash = true,
+		columns = {
+			"icon",
+			-- "permissions",
+			"size",
+			-- "mtime",
+		},
+		-- delete_to_trash = true,
 		keymaps = {
 			["<C-c>"] = false,
 			["q"] = "actions.close",

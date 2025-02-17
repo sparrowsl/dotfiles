@@ -1,6 +1,7 @@
 -- Collection of various small independent plugins/modules
 return {
 	"echasnovski/mini.nvim",
+	event = "VeryLazy",
 	config = function()
 		require("mini.animate").setup()
 

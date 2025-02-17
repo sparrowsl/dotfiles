@@ -1,6 +1,7 @@
 return {
 	"nvim-flutter/flutter-tools.nvim",
 	ft = "dart",
+	event = "VeryLazy",
 	ependencies = {
 		"nvim-lua/plenary.nvim",
 	},
