@@ -38,22 +38,22 @@ return {
 	-- Highlight todo, notes, etc in comments
 	{ "folke/todo-comments.nvim", event = "VeryLazy", opts = {} },
 
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		event = "VeryLazy",
-		opts = {
-			whitespace = {
-				highlight = { "Whitespace", "NonText" },
-			},
-			indent = {
-				char = "▏",
-			},
-			scope = {
-				show_start = false,
-				show_end = false,
-				show_exact_scope = true,
-			},
-		},
-	},
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	main = "ibl",
+	-- 	event = "VeryLazy",
+	-- 	opts = {
+	-- 		whitespace = {
+	-- 			highlight = { "Whitespace", "NonText" },
+	-- 		},
+	-- 		indent = {
+	-- 			char = "▏",
+	-- 		},
+	-- 		scope = {
+	-- 			show_start = false,
+	-- 			show_end = false,
+	-- 			show_exact_scope = true,
+	-- 		},
+	-- 	},
+	-- },
 }

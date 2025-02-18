@@ -9,6 +9,8 @@ return {
 
 		require("mini.comment").setup()
 
+		require("mini.indentscope").setup()
+
 		-- require("mini.ai").setup({ n_lines = 500 })
 
 		-- require("mini.surround").setup()
