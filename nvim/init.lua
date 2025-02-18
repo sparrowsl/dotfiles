@@ -23,7 +23,7 @@ require("lazy").setup({
 	require("plugins.bufferline"),
 	require("plugins.gitsigns"),
 	require("plugins.which-key"),
-	require("plugins.snacks"),
+	-- require("plugins.snacks"),
 	require("plugins.flutter"),
 	-- require("plugins.telescope"),
 	require("plugins.fzf-lua"),
