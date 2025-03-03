@@ -176,13 +176,13 @@ return {
 				},
 			},
 			-- dockerls = {},
-			-- zls = {
-			-- 	settings={
-			-- 		zls={
-			-- 		-- enable_build_on_save = true,
-			-- 		}
-			-- 	}
-			-- },
+			zls = {
+				settings = {
+					zls = {
+						-- enable_build_on_save = true,
+					},
+				},
+			},
 			rust_analyzer = {},
 			-- ts_ls = {},
 			vtsls = {},

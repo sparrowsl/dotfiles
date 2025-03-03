@@ -29,5 +29,6 @@ return {
 			ghost_text = { enabled = true, show_with_selection = false },
 			menu = { auto_show = true },
 		},
+		cmdline = {},
 	},
 }
