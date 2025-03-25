@@ -108,7 +108,7 @@ return {
 			pyright = {},
 			biome = {
 				filetypes = {
-					"css",
+					-- "css",
 					"javascript",
 					"javascriptreact",
 					"json",
@@ -140,7 +140,9 @@ return {
 				filetypes = { "sql" },
 			},
 			-- ruff = {},
-			svelte = {},
+			svelte = {
+				filetypes = { "svelte" },
+			},
 			tailwindcss = {
 				-- filetypes copied and adjusted from tailwindcss-intellisense
 				filetypes = {
@@ -179,11 +181,12 @@ return {
 			zls = {
 				settings = {
 					zls = {
-						-- enable_build_on_save = true,
+						enable_build_on_save = true,
+						semantic_tokens = "partial",
 					},
 				},
 			},
-			rust_analyzer = {},
+			-- rust_analyzer = {},
 			-- ts_ls = {},
 			vtsls = {},
 			lua_ls = {
@@ -215,6 +218,7 @@ return {
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
+		---@diagnostic disable-next-line: missing-fields
 		require("mason-lspconfig").setup({
 			handlers = {
 				function(server_name)

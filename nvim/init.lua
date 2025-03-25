@@ -31,7 +31,7 @@ require("lazy").setup({
 	require("plugins.conform"),
 	require("plugins.noice"),
 	require("plugins.mini"),
-	-- require("plugins.neo-tree"),
+	require("plugins.neo-tree"),
 	require("plugins.oil"),
 	require("plugins.misc"),
 })

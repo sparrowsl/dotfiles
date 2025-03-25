@@ -35,6 +35,7 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin # needed for apps installed using Go
 
 export PATH=$PATH:/usr/local/nvim/bin
+export PATH=$PATH:/usr/local/zig
 
 export CHROME_EXECUTABLE="/usr/bin/opera"
 
