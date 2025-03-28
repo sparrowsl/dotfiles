@@ -12,23 +12,21 @@ return {
 			["<CR>"] = { "accept", "fallback" },
 		},
 
-		appearance = { nerd_font_variant = "normal" },
 		signature = { enabled = true },
 		completion = {
-			documentation = {
-				auto_show = true,
-				-- treesitter_highlighting = false,
-			},
-			-- trigger = { show_in_snippet = false },
+
+			accept = { auto_brackets = { enabled = false } },
+
+			documentation = { treesitter_highlighting = false },
 
 			list = {
 				max_items = 100,
 				selection = { auto_insert = false },
 			},
 
-			ghost_text = { enabled = true, show_with_selection = false },
-			menu = { auto_show = true },
+			ghost_text = { enabled = true, show_with_menu = false },
 		},
+
 		cmdline = {},
 	},
 }
