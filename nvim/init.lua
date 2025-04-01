@@ -10,21 +10,21 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	if vim.v.shell_error ~= 0 then
 		error("Error cloning lazy.nvim:\n" .. out)
 	end
-end ---@diagnostic disable-next-line: undefined-field
+end
 
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- require("plugins.tokyonight"),
+	require("plugins.tokyonight"),
 	-- require("plugins.catppuccin"),
-	require("plugins.rose-pine"),
+	-- require("plugins.rose-pine"),
 	require("plugins.treesitter"),
 	require("plugins.blink"),
 	require("plugins.bufferline"),
 	require("plugins.gitsigns"),
 	require("plugins.which-key"),
 	-- require("plugins.snacks"),
-	require("plugins.flutter"),
+	-- require("plugins.flutter"),
 	-- require("plugins.telescope"),
 	require("plugins.fzf-lua"),
 	require("plugins.lspconfig"),

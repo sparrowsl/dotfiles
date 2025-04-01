@@ -21,9 +21,7 @@ return {
 		vim.keymap.set("n", "<leader><leader>", fzf_lua.buffers, { desc = "[ ] Find existing buffers" })
 		vim.keymap.set("n", "<leader>su", fzf_lua.spell_suggest, { desc = "[S]pell S[u]ggestions" })
 		vim.keymap.set("n", "<leader>sp", fzf_lua.grep_project, { desc = "[S]earch [P]rojects" })
-		-- vim.keymap.set("n", "<leader>sb", fzf_lua.grep_curbuf, { desc = "[S]earch [P]rojects" })
 
-		-- vim.keymap.set("n", "<leader>sd", builtin.git_status, { desc = "[G]it [S]tatus" })
 		vim.keymap.set("n", "<leader>sn", function()
 			fzf_lua.files({ cwd = vim.fn.stdpath("config") })
 		end, { desc = "[S]earch [N]eovim files" })
