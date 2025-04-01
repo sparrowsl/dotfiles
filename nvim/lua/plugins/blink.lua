@@ -14,14 +14,14 @@ return {
 
 		signature = { enabled = true },
 		completion = {
-
 			accept = { auto_brackets = { enabled = false } },
 
-			documentation = { treesitter_highlighting = false },
+			trigger = { show_in_snippet = false },
+			-- documentation = { treesitter_highlighting = false },
 
 			list = {
 				max_items = 100,
-				selection = { auto_insert = false },
+				selection = { preselect = true, auto_insert = false },
 			},
 
 			ghost_text = { enabled = true, show_with_menu = false },
