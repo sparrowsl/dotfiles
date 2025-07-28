@@ -19,7 +19,7 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>bd", "<Cmd>bd<CR>", desc = "Delete Current Buffer", mode = "n" },
+		-- { "<leader>bd", "<Cmd>bd<CR>", desc = "Delete Current Buffer", mode = "n" },
 		{ "<leader>bn", "<Cmd>BufferLineCycleNext<CR>", desc = "Move to next Buffer", mode = "n" },
 		{ "<leader>bp", "<Cmd>BufferLineCyclePrev<CR>", desc = "Move to prev Buffer", mode = "n" },
 	},

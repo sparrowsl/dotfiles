@@ -2,6 +2,12 @@ require("core.options")
 require("core.keymaps")
 require("core.autocmds")
 
+-- Set default root markers for all clients
+vim.lsp.config("*", {
+	root_markers = { ".git" },
+})
+-- vim.lsp.enable({ "gopls" })
+
 -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -23,7 +29,7 @@ require("lazy").setup({
 	require("plugins.bufferline"),
 	require("plugins.gitsigns"),
 	require("plugins.which-key"),
-	-- require("plugins.snacks"),
+	require("plugins.snacks"),
 	-- require("plugins.flutter"),
 	-- require("plugins.telescope"),
 	require("plugins.fzf-lua"),
@@ -31,7 +37,7 @@ require("lazy").setup({
 	require("plugins.conform"),
 	require("plugins.noice"),
 	require("plugins.mini"),
-	require("plugins.neo-tree"),
-	require("plugins.oil"),
+	-- require("plugins.neo-tree"),
+	-- require("plugins.oil"),
 	require("plugins.misc"),
 })
