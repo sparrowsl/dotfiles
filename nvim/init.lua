@@ -6,7 +6,7 @@ require("core.autocmds")
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
--- vim.lsp.enable({ "gopls" })
+vim.lsp.enable({ "gopls", "clangd" })
 
 -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -26,7 +26,7 @@ require("lazy").setup({
 	require("plugins.rose-pine"),
 	require("plugins.treesitter"),
 	require("plugins.blink"),
-	require("plugins.bufferline"),
+	-- require("plugins.bufferline"),
 	require("plugins.gitsigns"),
 	require("plugins.which-key"),
 	require("plugins.snacks"),
