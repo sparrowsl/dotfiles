@@ -7,6 +7,7 @@ vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 vim.lsp.enable({ "gopls", "clangd" })
+-- vim.lsp.on_type_formatting.enable()
 
 -- See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -34,7 +35,7 @@ require("lazy").setup({
 	-- require("plugins.telescope"),
 	require("plugins.fzf-lua"),
 	require("plugins.lspconfig"),
-	require("plugins.conform"),
+	-- require("plugins.conform"),
 	require("plugins.noice"),
 	require("plugins.mini"),
 	-- require("plugins.neo-tree"),

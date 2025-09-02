@@ -39,3 +39,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+-- Autoformat on save using only built-in LSP
+vim.api.nvim_create_autocmd("BufWritePre", {
+	callback = function(args)
+		local bufnr = args.buf
+		local disable_filetypes = { c = false, cpp = true }
+
+		if disable_filetypes[vim.bo[bufnr].filetype] then
+			return
+		end
+
+		vim.lsp.buf.format({
+			bufnr = bufnr,
+			timeout_ms = 500,
+			async = false, -- keep it sync so it finishes before saving
+		})
+	end,
+})

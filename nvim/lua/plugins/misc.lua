@@ -18,5 +18,5 @@ return {
 	{ "folke/lazydev.nvim", ft = "lua", opts = {} },
 
 	-- Highlight todo, notes, etc in comments
-	{ "folke/todo-comments.nvim", event = "VeryLazy", opts = {} },
+	-- { "folke/todo-comments.nvim", event = "VeryLazy", opts = {} },
 }
