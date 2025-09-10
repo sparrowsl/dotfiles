@@ -1,6 +1,7 @@
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true }) -- Disable the spacebar key's default behavior
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })           -- Disable the spacebar key's default behavior
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { noremap = true, silent = true }) -- save file
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { noremap = true, silent = true }) -- Set highlight on search, but clear on pressing <Esc> in normal mode
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { noremap = true, silent = true })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
@@ -27,19 +28,31 @@ vim.keymap.set("n", "<leader>h", "<C-w>s", { silent = true, noremap = true, desc
 
 -- Line Wrapping
 vim.keymap.set(
-	"n",
-	"<leader>lw",
-	"<cmd>set wrap!<CR>",
-	{ silent = true, noremap = true, desc = "Toggle [L]ine [W]rap" }
+  "n",
+  "<leader>lw",
+  "<cmd>set wrap!<CR>",
+  { silent = true, noremap = true, desc = "Toggle [L]ine [W]rap" }
 )
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", function()
-	vim.diagnostic.jump({ count = -1, float = true })
+  vim.diagnostic.jump({ count = -1, float = true })
 end, { desc = "Go to previous [D]iagnostic message" })
+
 vim.keymap.set("n", "]d", function()
-	vim.diagnostic.jump({ count = 1, float = true })
+  vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Go to next [D]iagnostic message" })
 -- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
--- vim.keymap.set("n","K",vim.lsp.buf.hover,{desc="Hover"})
+
+-- LSP keymaps
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "[G]oto [D]efinition" })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "[G]oto [D]eclaration" })
+vim.keymap.set("n", "gI", vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "[G]oto [R]eferences" })
+vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, { desc = "Type [D]efinition" })
+vim.keymap.set("n", "<leader>ds", vim.lsp.buf.document_symbol, { desc = "[D]ocument [S]ymbols" })
+vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, { desc = "[W]orkspace [S]ymbols" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "[R]e[n]ame" })
+vim.keymap.set({ "n", "x" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })

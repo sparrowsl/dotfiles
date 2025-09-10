@@ -1,4 +1,3 @@
--- Highlight, edit, and navigate code
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
@@ -18,13 +17,11 @@ return {
 			-- "luadoc",
 			"markdown",
 			"markdown_inline",
-			-- "prisma",
+
 			"python",
 			"sql",
 			"svelte",
 			"typescript",
-			-- "vim",
-			-- "vimdoc",
 		},
 		-- Autoinstall languages that are not installed
 		auto_install = true,

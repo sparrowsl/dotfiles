@@ -1,6 +1,6 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = "rafamadriz/friendly-snippets",
+	dependencies = { "rafamadriz/friendly-snippets" },
 	event = "VeryLazy",
 	version = "*",
 	---@module 'blink.cmp'
