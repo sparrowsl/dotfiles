@@ -22,11 +22,11 @@ require("lazy").setup({
   require("plugins.bufferline"),
   require("plugins.gitsigns"),
   require("plugins.which-key"),
-  require("plugins.snacks"),
-  require("plugins.flutter"),
+  -- require("plugins.flutter"),
   require("plugins.fzf-lua"),
   require("plugins.lspconfig"),
-  -- require("plugins.conform"),
+  require("plugins.conform"),
+  require("plugins.neo-tree"),
   require("plugins.mini"),
   require("plugins.misc"),
 })
@@ -43,4 +43,19 @@ vim.lsp.config("*", {
   capabilities = capabilities,
 })
 
-vim.lsp.enable({ "luals", "gopls", "clangd", "vtsls", "zls" })
+vim.lsp.enable({
+  "basedpyright",
+  "biome",
+  "clangd",
+  "gopls",
+  "prettierd",
+  "ruff",
+  "sqlls",
+  "html",
+  "cssls",
+  "tailwindcss",
+  "svelte",
+  "vtsls",
+  "zls",
+  "luals"
+})
