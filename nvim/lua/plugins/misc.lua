@@ -1,7 +1,7 @@
 return {
   -- Detect tabstop and shiftwidth automatically
-  { "tpope/vim-sleuth" },
-  { "folke/lazydev.nvim", ft = "lua", opts = {} },
+  -- { "tpope/vim-sleuth" },
+  -- { "folke/lazydev.nvim", ft = "lua", opts = {} },
 
   {
     "sindrets/diffview.nvim",

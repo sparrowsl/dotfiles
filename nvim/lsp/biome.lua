@@ -51,6 +51,8 @@ return {
     -- We fallback to the current working directory if no project root is found
     local project_root = vim.fs.root(bufnr, root_markers) or vim.fn.getcwd()
 
+    local dir_root = project_root and project_root or nil
+    on_dir(dir_root)
     -- We know that the buffer is using Biome if it has a config file
     -- in its directory tree.
     local filename = vim.api.nvim_buf_get_name(bufnr)

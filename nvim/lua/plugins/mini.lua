@@ -11,17 +11,6 @@ return {
     -- require("mini.ai").setup({ n_lines = 500 })
     -- require("mini.surround").setup()
 
-    require("mini.move").setup({
-      mappings = {
-        -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-        down = '<Alt-Down>',
-        up = '<Alt-Up>',
-        -- Move current line in Normal mode
-        line_down = '<Alt-Down>',
-        line_up = '<Alt-Up>',
-      },
-    })
-
     require("mini.pairs").setup()
 
     local statusline = require("mini.statusline")
