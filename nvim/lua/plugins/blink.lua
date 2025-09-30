@@ -20,7 +20,7 @@ return {
 			-- documentation = { treesitter_highlighting = false },
 
 			list = {
-				max_items = 100,
+				max_items = 10,
 				selection = { preselect = true, auto_insert = false },
 			},
 
