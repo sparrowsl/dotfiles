@@ -1,7 +1,14 @@
 return {
-  -- Detect tabstop and shiftwidth automatically
-  -- { "tpope/vim-sleuth" },
-  -- { "folke/lazydev.nvim", ft = "lua", opts = {} },
+  {
+    "folke/lazydev.nvim",
+    ft = "lua", -- only load on lua files
+    opts = {
+      library = {
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
 
   {
     "sindrets/diffview.nvim",
@@ -17,5 +24,5 @@ return {
   },
 
   -- Highlight todo, notes, etc in comments
-  -- { "folke/todo-comments.nvim", event = "VeryLazy", opts = {} },
+  { "folke/todo-comments.nvim", event = "VeryLazy", opts = {} },
 }

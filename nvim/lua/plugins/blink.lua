@@ -1,32 +1,30 @@
 return {
-	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets" },
-	event = "VeryLazy",
-	version = "*",
-	---@module 'blink.cmp'
-	---@type blink.cmp.Config
-	opts = {
-		keymap = {
-			preset = "super-tab",
+  "saghen/blink.cmp",
+  dependencies = { "rafamadriz/friendly-snippets" },
+  event = "VeryLazy",
+  version = "*",
+  opts = {
+    keymap = {
+      preset = "super-tab",
 
-			["<CR>"] = { "accept", "fallback" },
-		},
+      ["<CR>"] = { "accept", "fallback" },
+    },
 
-		signature = { enabled = true },
-		completion = {
-			accept = { auto_brackets = { enabled = false } },
+    signature = { enabled = true },
+    completion = {
+      accept = { auto_brackets = { enabled = false } },
 
-			trigger = { show_in_snippet = false },
+      trigger = { show_in_snippet = false },
 
-			list = {
-				max_items = 10,
-				selection = { preselect = true, auto_insert = false },
-			},
+      list = {
+        max_items = 100,
+        selection = { preselect = true, auto_insert = false },
+      },
 
-			ghost_text = { enabled = true, show_with_menu = false },
-		},
+      ghost_text = { enabled = true, show_with_menu = false },
+    },
 
-		cmdline = {
+    cmdline = {
       keymap = {
         ['<CR>'] = { 'accept_and_enter', 'fallback' },
       },
@@ -43,5 +41,5 @@ return {
         }
       }
     }
-	},
+  },
 }

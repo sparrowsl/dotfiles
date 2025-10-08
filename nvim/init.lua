@@ -42,12 +42,39 @@ vim.lsp.config("*", {
   root_markers = { ".git" },
   capabilities = capabilities,
 })
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      runtime = { version = "LuaJIT" },
+
+      completion = { callSnippet = 'Replace' },
+      -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+      diagnostics = {
+        globals = { "vim", "require" }, -- add both vim and require
+        -- disable = { 'missing-fields' }
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME, -- include Neovim runtime
+        },
+      },
+      telemetry = { enable = false },
+    },
+  }
+})
+vim.lsp.config("zls", {
+  settings = {
+    zls = { enable_build_on_save = true, semantic_tokens = "partial" }
+  }
+})
 
 vim.lsp.enable({
   "basedpyright",
   "biome",
   "clangd",
   "gopls",
+  "emmet_ls",
   "prettierd",
   "ruff",
   "sqlls",
@@ -57,7 +84,7 @@ vim.lsp.enable({
   "svelte",
   "vtsls",
   "zls",
-  "luals"
+  "lua_ls"
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
