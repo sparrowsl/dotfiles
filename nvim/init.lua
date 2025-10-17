@@ -20,7 +20,7 @@ require("lazy").setup({
   require("plugins.treesitter"),
   require("plugins.blink"),
   require("plugins.bufferline"),
-  require("plugins.gitsigns"),
+  -- require("plugins.gitsigns"),
   require("plugins.which-key"),
   -- require("plugins.flutter"),
   -- require("plugins.noice"),
