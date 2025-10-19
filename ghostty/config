@@ -1,19 +1,15 @@
-theme = rose-pine-moon
-# font-size = 10
+theme = Rose Pine Moon
+# font-size = 9.85
 cursor-style = bar
-# window-padding-x = 5
 window-decoration = false
 clipboard-trim-trailing-spaces = true
 gtk-single-instance = true
-# gtk-titlebar = false
-# gtk-adwaita = false
 gtk-tabs-location = hidden
 adw-toolbar-style = flat
 confirm-close-surface = false
-# fullscreen = true
+fullscreen = true
 
 # ===== Keybindings ===== #
 keybind = alt+-=new_split:right
 keybind = alt+/=new_split:down
 keybind = ctrl+]=goto_split:next
-
