@@ -23,7 +23,7 @@ require("lazy").setup({
   -- require("plugins.gitsigns"),
   require("plugins.which-key"),
   -- require("plugins.flutter"),
-  -- require("plugins.noice"),
+  require("plugins.toggleterm"),
   require("plugins.fzf-lua"),
   require("plugins.lspconfig"),
   require("plugins.neo-tree"),

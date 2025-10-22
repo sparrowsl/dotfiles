@@ -13,12 +13,6 @@ return {
 
     require("mini.pairs").setup()
 
-    -- require("mini.files").setup({
-    --   mappings = {
-    --     go_in = '<CR>',
-    --   },
-    -- })
-
     local statusline = require("mini.statusline")
     statusline.setup({ use_icons = vim.g.have_nerd_font, lazy = false })
 
@@ -27,10 +21,6 @@ return {
     statusline.section_location = function()
       return "%2l:%-2v"
     end
-
-    require('mini.starter').setup({
-      header = "Hello, Sparrow!",
-    })
 
     require('mini.trailspace').setup()
   end,
