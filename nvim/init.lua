@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   require("plugins.tokyonight"),
-  -- require("plugins.rose-pine"),
+  require("plugins.rose-pine"),
   require("plugins.treesitter"),
   require("plugins.blink"),
   require("plugins.bufferline"),
@@ -74,7 +74,7 @@ vim.lsp.enable({
   "biome",
   "clangd",
   "gopls",
-  "emmet_ls",
+  "emmet_language_server",
   "prettierd",
   "ruff",
   "sqlls",

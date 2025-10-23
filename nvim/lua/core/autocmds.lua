@@ -95,7 +95,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format({
       bufnr = bufnr,
       timeout_ms = 500,
-      async = false, -- keep it sync so it finishes before saving
+      -- async = false, -- keep it sync so it finishes before saving
     })
   end,
 })
