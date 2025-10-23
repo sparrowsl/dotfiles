@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   require("plugins.tokyonight"),
-  require("plugins.rose-pine"),
   require("plugins.treesitter"),
   require("plugins.blink"),
   require("plugins.bufferline"),
