@@ -21,11 +21,11 @@ require("lazy").setup({
   require("plugins.bufferline"),
   -- require("plugins.gitsigns"),
   require("plugins.which-key"),
+  require("plugins.oil"),
   -- require("plugins.flutter"),
   require("plugins.toggleterm"),
   require("plugins.fzf-lua"),
   require("plugins.lspconfig"),
-  require("plugins.neo-tree"),
   require("plugins.mini"),
   require("plugins.misc"),
 })
